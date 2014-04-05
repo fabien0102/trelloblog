@@ -78,15 +78,17 @@
     <section class="col-sm-8">
       <ul class="posts" ng-controller="PostListCtrl">
         <li class="post" ng-repeat="post in posts | notPastDue | published">
-          <h3>{{post.name}}</h3>
+          <h3 class="post-title">{{post.name}}</h3>
           <p data-btf-markdown="post.desc"></p>
         </li>
       </ul>
     </section>
 
-    <section class="col-sm-4">
-      Here is a POC.
-    </section>
+    <aside class="sidebar-pitch col-sm-4">
+      Here is a POC of a blog where posts are managed directly from a Trello
+      board. Please have a look at <a
+        href="https://github.com/fabien0102/trelloblog">the project repo</a>.
+    </aside>
   </div>
 </main>
 </body>

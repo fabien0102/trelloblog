@@ -1,9 +1,21 @@
+/**
+ * RESET
+ */
 body {
   background-color : #F0F0F0;
   color            : #393939;
   font             : 16px/21px ff-meta-serif-web-pro, Georgia, "Times New Roman", serif;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  clear       : both;
+  font-weight : bold;
+  font-family : ff-meta-web-pro, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/**
+ * OVERRIDE BOOTSTRAP
+ */
 .navbar {
   border-radius : 0;
 }
@@ -39,4 +51,37 @@ body {
   display : inline-block;
   float   : none;
   padding : 5px 15px;
+}
+
+/**
+ * OUR OWN STYLE
+ */
+.posts {
+  list-style-type : none;
+}
+
+.post {
+  margin           : 1.625em 0;
+  padding          : 20px;
+  border-radius    : 3px;
+  background-color : #FFF;
+}
+
+.post-title {
+  clear         : both;
+  margin-top    : 0;
+  margin-bottom : 5px;
+  font-weight   : bold;
+  font-size     : 30px;
+  line-height   : 1.1em;
+}
+
+.sidebar-pitch {
+  margin-top : 1.625em;
+  color      : #999;
+}
+
+.sidebar-pitch a {
+  color           : #393939;
+  text-decoration : underline;
 }
