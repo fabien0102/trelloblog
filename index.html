@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <title>My blog</title>
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="css/app.css"/>
 
   <script src="bower_components/lodash/dist/lodash.min.js"></script>
   <script src="bower_components/jQuery/dist/jquery.min.js"></script>
@@ -19,11 +20,74 @@
   <script src="js/filters.js"></script>
 </head>
 <body>
-  <ul class="posts" ng-controller="PostListCtrl">
-    <li class="post" ng-repeat="post in posts | notPastDue | published">
-    <h3>{{post.name}}</h3>
-      <p data-btf-markdown="post.desc"></p>
-    </li>
-  </ul>
+
+<main class="container-fluid">
+  <div class="row">
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse"
+                  data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">
+            <img src="images/logo.png" alt="Trello-Angular Blog (P.O.C)"/>
+          </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Lorem</a></li>
+            <li><a href="#">Ipsum</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle"
+                 data-toggle="dropdown">Categories <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">CSS and cie</a></li>
+                <li><a href="#">Git Management</a></li>
+                <li><a href="#">YOLO</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Flowers and unicorns</a></li>
+                <li class="divider"></li>
+                <li>
+                  <a href="https://www.youtube.com/watch?v=GaoLU6zKaws"
+                     target="_blank">Do not click</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <form class="navbar-form navbar-right" role="search">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Search">
+            </div>
+            <button type="submit" class="btn btn-default">Search</button>
+          </form>
+        </div>
+        <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container-fluid -->
+    </nav>
+  </div>
+
+  <div class="row">
+    <section class="col-sm-8">
+      <ul class="posts" ng-controller="PostListCtrl">
+        <li class="post" ng-repeat="post in posts | notPastDue | published">
+          <h3>{{post.name}}</h3>
+          <p data-btf-markdown="post.desc"></p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="col-sm-4">
+      Here is a POC.
+    </section>
+  </div>
+</main>
 </body>
 </html>
