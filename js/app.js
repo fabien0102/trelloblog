@@ -3,7 +3,8 @@
 /* App Module */
 
 var app = angular.module( "trelloBlogApp", [
-  "trelloBlogControllers"
+  "trelloBlogControllers",
+  "btford.markdown"
 ] );
 
 //app.config([]);
