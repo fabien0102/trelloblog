@@ -17,13 +17,11 @@
   <script src="js/controllers.js"></script>
 </head>
 <body>
-  <div class="post-list" ng-controller="PostListCtrl">
-    <h1>{{title}}</h1>
-  </div>
-
-  <btf-markdown>
-      #Markdown directive
-      *It works!*
-  </btf-markdown>
+  <ul class="posts" ng-controller="PostListCtrl">
+    <li class="post" ng-repeat="post in posts">
+      <h3>{{post.name}}</h3>
+      <p data-btf-markdown="post.desc">{{post.desc}}</p>
+    </li>
+  </ul>
 </body>
 </html>

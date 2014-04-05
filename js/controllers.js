@@ -8,7 +8,7 @@ trelloBlogControllers.controller( "PostListCtrl", ["$scope",
   function ( $scope ) {
     var success = function ( data ) {
       console.log( data );
-      $scope.title = data.name;
+      $scope.posts = data;
       $scope.$digest();
     };
 
@@ -16,7 +16,7 @@ trelloBlogControllers.controller( "PostListCtrl", ["$scope",
       console.log( err );
     };
 
-    Trello.boards.get( "c94SaRKm", success, error );
+    Trello.lists.get( "533f122757218a7e2c84c2cb/cards", success, error );
   }
 ] );
 
