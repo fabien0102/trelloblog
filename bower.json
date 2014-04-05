@@ -1,0 +1,17 @@
+{
+  "name": "trelloblog",
+  "version": "0.0.0",
+  "homepage": "https://github.com/fabien0102/trelloblog",
+  "authors": [
+    "fabien0102 <fabien0102@planee.fr>",
+    "nicoespeon <nicolascarlo.espeon@gmail.com>"
+  ],
+  "description": "Use Trello as a database and back-office for a blogging system.",
+  "main": "index.html",
+  "keywords": [
+    "trello",
+    "blog",
+    "cms"
+  ],
+  "license": "MIT"
+}
