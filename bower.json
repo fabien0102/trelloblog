@@ -1,26 +1,27 @@
 {
-    "name": "trelloblog",
-    "version": "0.0.0",
-    "homepage": "https://github.com/fabien0102/trelloblog",
-    "authors": [
-        "fabien0102 <fabien0102@planee.fr>",
-        "nicoespeon <nicolascarlo.espeon@gmail.com>"
-    ],
-    "description": "Use Trello as a database and back-office for a blogging system.",
-    "main": "index.html",
-    "keywords": [
-        "trello",
-        "blog",
-        "cms"
-    ],
-    "license": "MIT",
-    "dependencies": {
-        "jQuery": "~2.1.0",
-        "angular": "~1.2.16",
-        "bootstrap": "~3.1.1",
-        "angular-markdown-directive": "~0.2.0"
-    },
-    "resolutions": {
-        "angular": "~1.2.16"
-    }
+  "name": "trelloblog",
+  "version": "0.0.0",
+  "homepage": "https://github.com/fabien0102/trelloblog",
+  "authors": [
+    "fabien0102 <fabien0102@planee.fr>",
+    "nicoespeon <nicolascarlo.espeon@gmail.com>",
+    "fmonniot <francoismonniot@gmail.com>"
+  ],
+  "description": "Use Trello as a database and back-office for a blogging system.",
+  "main": "index.html",
+  "keywords": [
+    "trello",
+    "blog",
+    "cms"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "jQuery": "~2.1.0",
+    "angular": "~1.2.16",
+    "bootstrap": "~3.1.1",
+    "angular-markdown-directive": "~0.2.0"
+  },
+  "resolutions": {
+    "angular": "~1.2.16"
+  }
 }
