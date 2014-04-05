@@ -4,11 +4,24 @@
 
 angular.module("trelloBlogFilters", [])
   .filter("notPastDue", function () {
-    return function (input) {
-      if (_.isArray(input)) {
-        return _.filter(input, function (item) {
-          return new Date(item.due).getTime() < Date.now();
+    return function (posts) {
+      if (_.isArray(posts)) {
+        return _.filter(posts, function (post) {
+          return new Date(post.due).getTime() < Date.now();
         });
       }
+    };
+  })
+  .filter("published", function () {
+    return function (posts) {
+      return _.filter(posts, function (post) {
+        var draft = false;
+        _.each(post.labels, function (label) {
+          if (label.name === "Draft") {
+            draft = true;
+          }
+        });
+        return !draft;
+      });
     };
   });
