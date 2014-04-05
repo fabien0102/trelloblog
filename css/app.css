@@ -47,6 +47,13 @@ h1, h2, h3, h4, h5, h6 {
   color            : #CCC;
 }
 
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+  background-color : transparent;
+  color            : #CCC;
+}
+
 .navbar-brand {
   display : inline-block;
   float   : none;
