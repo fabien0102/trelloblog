@@ -4,7 +4,6 @@
   <meta charset="utf-8">
   <title>My blog</title>
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/css/bootstrap.min.css"/>
-  <link rel="stylesheet" href="css/app.css"/>
 
   <script src="bower_components/lodash/dist/lodash.min.js"></script>
   <script src="bower_components/jQuery/dist/jquery.min.js"></script>
@@ -79,6 +78,9 @@
       <ul class="posts" ng-controller="PostListCtrl">
         <li class="post" ng-repeat="post in posts | notPastDue | published">
           <h3 class="post-title">{{post.name}}</h3>
+          <img ng-src="https://trello-avatars.s3.amazonaws.com/{{ member.avatarHash}}/30.png"
+               ng-repeat="member in post.members">
+
           <p data-btf-markdown="post.desc"></p>
         </li>
       </ul>

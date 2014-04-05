@@ -15,7 +15,7 @@ angular.module("trelloBlogControllers", [])
         console.log(err);
       };
 
-      Trello.lists.get("533f122757218a7e2c84c2cb/cards", {filter: "open"}, success, error);
+      Trello.lists.get("533f122757218a7e2c84c2cb/cards", {filter: "open", members: true}, success, error);
     }
   ])
   .controller("PostDetailCtrl", ["$scope",
