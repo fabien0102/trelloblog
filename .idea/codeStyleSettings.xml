@@ -16,7 +16,6 @@
           </value>
         </option>
         <option name="LINE_SEPARATOR" value="&#10;" />
-        <option name="RIGHT_MARGIN" value="80" />
         <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="true" />
         <option name="HTML_KEEP_BLANK_LINES" value="1" />
         <option name="HTML_ALIGN_TEXT" value="true" />
