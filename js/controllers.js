@@ -7,8 +7,9 @@ angular.module("trelloBlogControllers", [])
     function ( $scope, config ) {
       $scope.dateFormat = 'dd MMM yyyy';
       var success = function (data) {
-        //console.log(data);
-        $scope.posts = data;
+        $scope.posts = _.sortBy( data, function ( post ) {
+          return new Date( post.due ).getTime();
+        } ).reverse();
         $scope.$digest();
       };
 
