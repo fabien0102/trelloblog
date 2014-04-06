@@ -23,7 +23,7 @@
     "lodash": "~2.4.1",
     "angular-bootstrap": "~0.10.0",
     "angular-i18n": "~1.2.16",
-    "angular-dynamic-locale": "~0.1.6"
+    "angular-dynamic-locale": "~0.1.6",
     "gsap": "~1.11.6",
     "angular-animate": "~1.2.16"
   },
