@@ -116,8 +116,30 @@ h1, h2, h3, h4, h5, h6 {
   text-decoration : underline;
 }
 
-.pop-in {
-  -webkit-transform : scale(0);
-  -moz-transform    : scale(0);
-  transform         : scale(0);
+.sidebar-pitch .nav {
+  margin-bottom : 0.5em;
+}
+
+.sidebar-pitch .nav li {
+  float        : right;
+  margin-right : 0.5em;
+}
+
+.sidebar-pitch .nav a {
+  text-decoration : none;
+  background      : no-repeat 10px center;
+  background-size : 21px;
+  padding-left    : 41px;
+}
+.sidebar-pitch .nav a:hover {
+  background-color : #FFF;
+}
+.sidebar-pitch .nav a.fr {
+  background-image : url("https://raw.githubusercontent.com/arvida/emoji-cheat-sheet.com/master/public/graphics/emojis/fr.png");
+}
+.sidebar-pitch .nav a.gb {
+  background-image : url("https://raw.githubusercontent.com/arvida/emoji-cheat-sheet.com/master/public/graphics/emojis/gb.png");
+}
+.sidebar-pitch .nav a.es {
+  background-image : url("https://raw.githubusercontent.com/arvida/emoji-cheat-sheet.com/master/public/graphics/emojis/es.png");
 }

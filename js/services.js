@@ -12,6 +12,9 @@ angular.module( "trelloBlogServices", [] )
     $rootScope.$watch( "locale", function ( newLocale ) {
       tmhDynamicLocale.set( newLocale.toLocaleLowerCase() );
       currentLocale = newLocale.toLocaleLowerCase();
+
+      $rootScope.locale = currentLocale;
+      $rootScope.shortLocale = currentLocale.split( "-" )[0];
     } );
 
     // By default, use browser language
