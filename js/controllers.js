@@ -5,7 +5,8 @@
 angular.module("trelloBlogControllers", [])
   .controller( "PostListCtrl", ["$scope", "config",
     function ( $scope, config ) {
-      $scope.dateFormat = 'dd MMM yyyy';
+      $scope.dateFormat = 'fullDate';
+
       var success = function (data) {
         $scope.posts = _.sortBy( data, function ( post ) {
           return new Date( post.due ).getTime();
