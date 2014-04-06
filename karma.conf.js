@@ -25,7 +25,6 @@ module.exports = function ( config ) {
       "bower_components/angular-bootstrap/ui-bootstrap.min.js",
       "bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js",
       "bower_components/angular-animate/angular-animate.min.js",
-      "https://api.trello.com/1/client.js?key=5af287a3734f0af280d09c2d3d0e3914",
       'js/*.js',
       'test/**/*.js',
       'test/**/*.js'
