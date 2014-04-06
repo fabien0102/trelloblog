@@ -93,7 +93,8 @@
             <span class="by-author" data-ng-show="post.members">
               <span class="sep"> by </span>
               <span class="author vcard" ng-repeat="member in post.members">
-                <img ng-src="https://trello-avatars.s3.amazonaws.com/{{ member.avatarHash}}/30.png">
+                <img class="post-author img-circle"
+                     ng-src="https://trello-avatars.s3.amazonaws.com/{{ member.avatarHash}}/30.png">
                 {{ member.fullname }}
               </span>
             </span>
