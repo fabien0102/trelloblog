@@ -7,7 +7,7 @@ angular.module("trelloBlogFilters", [])
     return function (posts) {
       if (_.isArray(posts)) {
         return _.filter(posts, function (post) {
-          return new Date(post.due).getTime() < Date.now();
+          return !_.isNull( post.due ) && new Date( post.due ).getTime() < Date.now();
         });
       }
     };
