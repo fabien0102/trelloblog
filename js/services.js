@@ -6,7 +6,7 @@ angular.module( "trelloBlogServices", [] )
   .service( "config", ["$http", function ( $http ) {
     return $http.get( "config.json" );
   }] )
-  .service( "I18n", ["$rootScope", "tmhDynamicLocale", "Locales", function ( $rootScope, tmhDynamicLocale, Locales ) {
+  .service( "I18n", ["$rootScope", "tmhDynamicLocale", "LOCALES", function ( $rootScope, tmhDynamicLocale, LOCALES ) {
     // Keep a reference of the current locale
     var currentLocale;
 
@@ -23,20 +23,20 @@ angular.module( "trelloBlogServices", [] )
       translate: function ( key ) {
         var lang;
 
-        if ( _.has( Locales, currentLocale ) ) {
+        if ( _.has( LOCALES, currentLocale ) ) {
           // Language_Region exist
           lang = currentLocale;
         } else {
-          if ( _.has( Locales, currentLocale.split( "-" )[0] ) ) {
+          if ( _.has( LOCALES, currentLocale.split( "-" )[0] ) ) {
             // Language exist
             lang = currentLocale.split( "-" )[0];
           } else {
             // Default language
-            lang = Locales.default;
+            lang = LOCALES.default;
           }
         }
 
-        return Locales[lang][key];
+        return LOCALES[lang][key];
       }
     }
   }] );

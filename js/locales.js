@@ -3,7 +3,7 @@
 /* Locales */
 
 angular.module( "trelloBlogLocales", [] )
-  .constant( "Locales", {
+  .constant( "LOCALES", {
     "default": "en",
     "en": {
       "postedOn": "posted on"
