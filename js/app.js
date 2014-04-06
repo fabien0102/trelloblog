@@ -4,6 +4,7 @@
 
 var app = angular.module( "trelloBlogApp", [
   "trelloBlogControllers",
+  "trelloBlogConfig",
   "trelloBlogLocales",
   "trelloBlogServices",
   "trelloBlogFilters",

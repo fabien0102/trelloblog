@@ -18,10 +18,7 @@ angular.module("trelloBlogControllers", [])
         console.log(err);
       };
 
-      config.success( function ( config ) {
-        Trello.lists.get( config.list + "/cards", {filter: "open", members: true}, success, error );
-      } );
-      
+      Trello.lists.get( config.list + "/cards", {filter: "open", members: true}, success, error );
     }
   ])
   .controller("PostDetailCtrl", ["$scope",

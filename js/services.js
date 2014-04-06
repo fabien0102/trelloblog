@@ -3,9 +3,6 @@
 /* Services */
 
 angular.module( "trelloBlogServices", [] )
-  .service( "config", ["$http", function ( $http ) {
-    return $http.get( "config.json" );
-  }] )
   .service( "I18n", ["$rootScope", "tmhDynamicLocale", "LOCALES", function ( $rootScope, tmhDynamicLocale, LOCALES ) {
     // Keep a reference of the current locale
     var currentLocale;
