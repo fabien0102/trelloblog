@@ -95,13 +95,14 @@
             <span class="by-author" data-ng-show="post.members">
               <span class="sep"> by </span>
               <span class="author vcard" ng-repeat="member in post.members">
-                <img data-ng-src="https://trello-avatars.s3.amazonaws.com/{{ member.avatarHash}}/30.png"
+                <img class="post-author img-circle"
+                     data-ng-src="https://trello-avatars.s3.amazonaws.com/{{ member.avatarHash}}/30.png"
                      data-tooltip-placement="bottom" data-tooltip="{{member.fullName}}"/>
               </span>
             </span>
           </div>
 
-          <p data-btf-markdown="post.desc"></p>
+          <p class="post-content" data-btf-markdown="post.desc"></p>
         </li>
       </ul>
     </section>
