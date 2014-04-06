@@ -1,0 +1,33 @@
+{
+  "name": "taab",
+  "version": "0.0.0",
+  "description": "Trello as a Blog",
+  "scripts": {
+    "test": "./node_modules/karma/bin/karma start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/fabien0102/trelloblog.git"
+  },
+  "bugs": {
+    "url": "https://github.com/fabien0102/trelloblog/issues"
+  },
+  "homepage": "https://github.com/fabien0102/trelloblog",
+  "authors": [
+    "fabien0102 <fabien0102@planee.fr>",
+    "nicoespeon <nicolascarlo.espeon@gmail.com>",
+    "fmonniot <francoismonniot@gmail.com>"
+  ],
+  "main": "index.html",
+  "keywords": [
+    "trello",
+    "blog",
+    "cms"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "karma": "^0.12.3",
+    "karma-chrome-launcher": "^0.1.3",
+    "karma-jasmine": "^0.1.5"
+  }
+}
