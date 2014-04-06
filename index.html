@@ -96,7 +96,7 @@
       <!-- List of posts -->
       <ul class="posts" ng-controller="PostListCtrl">
         <li class="post list-in"
-            ng-repeat="post in posts | notPastDue | published">
+            ng-repeat="post in posts | notPastDue | published | currentLanguage:locale">
           <!-- Post meta information -->
           <div class="row">
             <div class="col-sm-10">
