@@ -17,7 +17,8 @@
   <script
       src="bower_components/angular-markdown-directive/markdown.js"></script>
   <script src="bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
-  <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+  <script
+      src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
 
   <script
       src="https://api.trello.com/1/client.js?key=5af287a3734f0af280d09c2d3d0e3914"></script>
@@ -85,23 +86,29 @@
     <section class="col-sm-8">
       <ul class="posts" ng-controller="PostListCtrl">
         <li class="post" ng-repeat="post in posts | notPastDue | published">
-          <h3 class="post-title">{{post.name}}</h3>
-
-          <div class="entry-meta">
-            <span class="posted-on" ng-show="post.due">Posted on
-              <a href="" title="11:18 am" rel="bookmark">
-                <time class="entry-date" datetime="{{ post.due }}" pubdate="">{{ post.due | date: dateFormat }}</time>
-              </a>
-            </span>
-            <span class="by-author" data-ng-show="post.members">
-              <span class="sep"> by </span>
-              <span class="author vcard" ng-repeat="member in post.members">
+          <!-- Post meta information -->
+          <div class="row">
+            <div class="col-sm-10">
+              <h3 class="post-title">{{post.name}}</h3>
+              <span ng-show="post.due">Posted on
+                <a href="" title="11:18 am" rel="bookmark">
+                  <time datetime="{{ post.due }}" pubdate="">
+                    {{ post.due | date: dateFormat }}
+                  </time>
+                </a>
+              </span><!-- /.post-title -->
+            </div>
+            <span class="post-authors col-sm-2"
+                  data-ng-show="post.members">
+              <span ng-repeat="member in post.members">
                 <img class="post-author img-circle"
-                     data-ng-src="https://trello-avatars.s3.amazonaws.com/{{ member.avatarHash}}/30.png"
-                     data-tooltip-placement="bottom" data-tooltip="{{member.fullName}}"/>
+                     data-ng-src="https://trello-avatars.s3.amazonaws.com/{{ member.avatarHash}}/50.png"
+                     data-tooltip-placement="right" data-
+                     tooltip="{{member.fullName}}"/>
               </span>
-            </span>
+            </span><!-- /.post-authors -->
           </div>
+          <!-- /.row -->
 
           <p class="post-content" data-btf-markdown="post.desc"></p>
         </li>
