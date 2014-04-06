@@ -28,6 +28,7 @@
   <script src="js/controllers.js"></script>
   <script src="js/filters.js"></script>
   <script src="js/services.js"></script>
+  <script src="js/locales.js"></script>
 </head>
 <body>
 
@@ -92,7 +93,7 @@
           <div class="row">
             <div class="col-sm-10">
               <h3 class="post-title">{{post.name}}</h3>
-              <span ng-show="post.due">Posted on
+              <span ng-show="post.due"> {{ i18n("postedOn") }}
                 <a href="" title="11:18 am" rel="bookmark">
                   <time datetime="{{ post.due }}" pubdate="">
                     {{ post.due | date: dateFormat }}

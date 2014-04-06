@@ -4,6 +4,7 @@
 
 var app = angular.module( "trelloBlogApp", [
   "trelloBlogControllers",
+  "trelloBlogLocales",
   "trelloBlogServices",
   "trelloBlogFilters",
   "btford.markdown",
@@ -13,11 +14,12 @@ var app = angular.module( "trelloBlogApp", [
   .config( ["tmhDynamicLocaleProvider", function ( tmhDynamicLocaleProvider ) {
     tmhDynamicLocaleProvider.localeLocationPattern( "bower_components/angular-i18n/angular-locale_{{locale}}.js" );
   }] )
-  .run( ["$rootScope", "tmhDynamicLocale", function ( $rootScope, tmhDynamicLocale ) {
-    $rootScope.$watch( 'locale', function ( newLocale ) {
-      tmhDynamicLocale.set( newLocale );
-    } );
-    $rootScope.locale = navigator.language.toLowerCase();
+  .run( ["$rootScope", "I18n", function ( $rootScope, I18n ) {
+
+    $rootScope.i18n = function ( key ) {
+      return I18n.translate( key );
+    };
+
   }] );
 
 //app.config([]);
