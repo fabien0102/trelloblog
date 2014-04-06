@@ -92,7 +92,7 @@
     <section class="col-sm-8">
       <!-- List of posts -->
       <ul class="posts" ng-controller="PostListCtrl">
-        <li class="post slide-in"
+        <li class="post slide-in slide-out"
             ng-repeat="post in trello.cards | notPastDue | published | currentLanguage:locale | filter:search">
         <!-- Post meta information -->
           <div class="row">

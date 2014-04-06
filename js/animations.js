@@ -1,4 +1,4 @@
-(function () {
+(function ( window ) {
   "use strict";
 
   /* Animations */
@@ -22,6 +22,19 @@
     TweenMax.to( element, options.duration, finalOptions );
   };
 
+  var slideOut = function ( element, done, TweenMax, config ) {
+    var options = config.animations["slide-out"];
+
+    // Take the element out of the flow after a few time.
+    window.setTimeout( function () {
+      $( element ).css( "position", "absolute" );
+    }, options.duration * 1000 * 0.4 );
+
+    var finalOptions = {opacity: 0, ease: Strong.easeOut, onComplete: done};
+    finalOptions[ options.direction ] = "-100px";
+    TweenMax.to( element, options.duration, finalOptions );
+  };
+
   /* Module definition */
 
   angular.module( "trelloBlogAnimations", ["ngAnimate"] )
@@ -41,6 +54,15 @@
         }
       }] )
 
+    .animation( ".slide-out", ["TweenMax", "config",
+      function ( TweenMax, config ) {
+        return {
+          leave: function ( element, done ) {
+            slideOut( element, done, TweenMax, config );
+          }
+        }
+      }] )
+
     .animation( ".pop-in", ["TweenMax", "config",
       function ( TweenMax, config ) {
         return {
@@ -49,4 +71,4 @@
           }
         }
       }] )
-})();
+})( window );

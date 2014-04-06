@@ -16,6 +16,10 @@ angular.module( "trelloBlogConfig", [] )
         "duration": 1,
         "direction": "right"
       },
+      "slide-out": {
+        "duration": 0.5,
+        "direction": "left"
+      },
       "pop-in": {
         "duration": 0.3
       }
