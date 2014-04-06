@@ -16,6 +16,8 @@
   <script src="bower_components/showdown/compressed/showdown.js"></script>
   <script
       src="bower_components/angular-markdown-directive/markdown.js"></script>
+  <script src="bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+  <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
 
   <script
       src="https://api.trello.com/1/client.js?key=5af287a3734f0af280d09c2d3d0e3914"></script>
@@ -93,12 +95,11 @@
             <span class="by-author" data-ng-show="post.members">
               <span class="sep"> by </span>
               <span class="author vcard" ng-repeat="member in post.members">
-                <img ng-src="https://trello-avatars.s3.amazonaws.com/{{ member.avatarHash}}/30.png">
-                {{ member.fullname }}
+                <img data-ng-src="https://trello-avatars.s3.amazonaws.com/{{ member.avatarHash}}/30.png"
+                     data-tooltip-placement="bottom" data-tooltip="{{member.fullName}}"/>
               </span>
             </span>
           </div>
-
 
           <p data-btf-markdown="post.desc"></p>
         </li>

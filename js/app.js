@@ -5,7 +5,8 @@
 var app = angular.module( "trelloBlogApp", [
   "trelloBlogControllers",
   "trelloBlogFilters",
-  "btford.markdown"
+  "btford.markdown",
+  "ui.bootstrap"
 ] );
 
 //app.config([]);
