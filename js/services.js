@@ -3,7 +3,8 @@
 /* Services */
 
 angular.module( "trelloBlogServices", [] )
-  .service( "I18n", ["$rootScope", "tmhDynamicLocale", "LOCALES", function ( $rootScope, tmhDynamicLocale, LOCALES ) {
+  .service( "I18n", ["$rootScope", "tmhDynamicLocale", "LOCALES", "config",
+    function ( $rootScope, tmhDynamicLocale, LOCALES, config ) {
     // Keep a reference of the current locale
     var currentLocale;
 
@@ -29,7 +30,7 @@ angular.module( "trelloBlogServices", [] )
             lang = currentLocale.split( "-" )[0];
           } else {
             // Default language
-            lang = LOCALES.default;
+            lang = config.language;
           }
         }
 
