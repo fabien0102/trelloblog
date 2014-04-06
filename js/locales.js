@@ -7,7 +7,7 @@ angular.module( "trelloBlogLocales", [] )
     "en-gb": {
       "postedOn": "posted on"
     },
-    "fr-fr": {
-      "postedOn": "posted on"
+    "fr": {
+      "postedOn": "posté le"
     }
   } );
