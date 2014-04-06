@@ -3,8 +3,8 @@
 /* Controllers */
 
 angular.module("trelloBlogControllers", [])
-  .controller("PostListCtrl", ["$scope",
-    function ($scope) {
+  .controller( "PostListCtrl", ["$scope", "config",
+    function ( $scope, config ) {
       $scope.dateFormat = 'dd MMM yyyy';
       var success = function (data) {
         //console.log(data);
@@ -16,7 +16,10 @@ angular.module("trelloBlogControllers", [])
         console.log(err);
       };
 
-      Trello.lists.get("533f122757218a7e2c84c2cb/cards", {filter: "open", members: true}, success, error);
+      config.success( function ( config ) {
+        Trello.lists.get( config.list + "/cards", {filter: "open", members: true}, success, error );
+      } );
+      
     }
   ])
   .controller("PostDetailCtrl", ["$scope",

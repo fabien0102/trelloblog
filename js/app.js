@@ -4,6 +4,7 @@
 
 var app = angular.module( "trelloBlogApp", [
   "trelloBlogControllers",
+  "trelloBlogServices",
   "trelloBlogFilters",
   "btford.markdown",
   "ui.bootstrap"
