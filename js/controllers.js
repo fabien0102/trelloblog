@@ -3,24 +3,11 @@
 /* Controllers */
 
 angular.module("trelloBlogControllers", [])
-  .controller( "PostListCtrl", ["$scope", "$http", "config",
-    function ( $scope, $http, config ) {
+  .controller( "PostListCtrl", ["$scope", "Trello", function ( $scope, Trello ) {
       $scope.dateFormat = 'fullDate';
 
-      var success = function ( response ) {
-        $scope.posts = _.sortBy( response.data, function ( post ) {
-          return new Date( post.due ).getTime();
-        } ).reverse();
-        $scope.$digest();
-      };
-
-      var error = function (err) {
-        console.log(err);
-      };
-
-      $http.get( "https://api.trello.com/1/lists/" + config.trello.list +
-                 "/cards?key=" + config.trello.apiKey +
-                 "&filter=open&members=true" ).then( success, error );
+    Trello.load();
+    $scope.trello = Trello.blog();
     }
   ])
   .controller("PostDetailCtrl", ["$scope",

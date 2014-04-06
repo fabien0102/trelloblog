@@ -40,4 +40,39 @@ angular.module( "trelloBlogServices", [] )
         return LOCALES[lang][key];
       }
     }
+    }] )
+  .service( "Trello", ["$http", "config", function ( $http, config ) {
+
+    var model = {
+      ready: false,
+      error: null
+    };
+
+    return {
+      load: function () {
+        // TODO Remove unused elements
+        $http.get( "https://api.trello.com/1/boards/" + config.trello.board +
+                   "/?key=" + config.trello.apiKey +
+                   "&lists=open&cards=open&members=all" ).then( function ( res ) {
+          model.ready = true;
+          model.name = res.data.name;
+          model.desc = res.data.desc;
+          //model.cards   = res.data.cards;
+          model.lists = res.data.lists;
+          model.members = res.data.members;
+          model.labels = res.data.labelNames;
+
+          model.cards = _.sortBy( res.data.cards, function ( post ) {
+            return new Date( post.due ).getTime();
+          } ).reverse();
+
+        }, function ( res ) {
+          model.error = 'Trello data access failed: ' + res.responseText;
+        } );
+      },
+
+      blog: function () {
+        return model;
+      }
+    };
   }] );
