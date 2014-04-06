@@ -98,7 +98,7 @@
           <div class="row">
             <div class="col-sm-10">
               <h3 class="post-title">{{post.name}}</h3>
-              <span ng-show="post.due"> {{ 'postedOn' | i18n }}
+              <span class="post-time" ng-show="post.due"> {{ 'postedOn' | i18n }}
                 <time datetime="{{ post.due }}" pubdate="">
                   {{ post.due | date: dateFormat }}
                 </time>
