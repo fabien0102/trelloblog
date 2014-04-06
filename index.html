@@ -31,6 +31,7 @@
   <script src="js/controllers.js"></script>
   <script src="js/filters.js"></script>
   <script src="js/services.js"></script>
+  <script src="js/animations.js"></script>
   <script src="js/locales.js"></script>
 </head>
 <body>
@@ -90,8 +91,10 @@
 
   <div class="row">
     <section class="col-sm-8">
+      <!-- List of posts -->
       <ul class="posts" ng-controller="PostListCtrl">
-        <li class="post" ng-repeat="post in posts | notPastDue | published">
+        <li class="post list-in"
+            ng-repeat="post in posts | notPastDue | published">
           <!-- Post meta information -->
           <div class="row">
             <div class="col-sm-10">

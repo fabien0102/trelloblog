@@ -7,6 +7,7 @@ var app = angular.module( "trelloBlogApp", [
   "trelloBlogLocales",
   "trelloBlogServices",
   "trelloBlogFilters",
+  "trelloBlogAnimations",
   "btford.markdown",
   "ui.bootstrap",
   "tmh.dynamicLocale"
