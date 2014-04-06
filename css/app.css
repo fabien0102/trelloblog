@@ -96,6 +96,16 @@ h1, h2, h3, h4, h5, h6 {
   text-align : center;
 }
 
+.post-time {
+  color      : #999;
+  font-style : italic;
+}
+
+.post-time time {
+  color      : #393939;
+  font-style : normal;
+}
+
 .sidebar-pitch {
   margin-top : 1.625em;
   color      : #999;
@@ -104,4 +114,10 @@ h1, h2, h3, h4, h5, h6 {
 .sidebar-pitch a {
   color           : #393939;
   text-decoration : underline;
+}
+
+.pop-in {
+  -webkit-transform : scale(0);
+  -moz-transform    : scale(0);
+  transform         : scale(0);
 }
