@@ -57,4 +57,16 @@ angular.module("trelloBlogFilters", [])
     return function ( key ) {
       return I18n.translate( key );
     };
+  }] )
+  .filter( "lang", [function () {
+    return function ( code ) {
+      switch ( code ) {
+      case "fr":
+        return "Français";
+      case "en":
+        return "English";
+      case "es":
+        return "Español";
+      }
+    };
   }] );

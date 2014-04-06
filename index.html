@@ -121,16 +121,13 @@
       </ul>
     </section>
 
-    <aside class="sidebar-pitch col-sm-4">
+    <aside class="sidebar-pitch col-sm-4" ng-controller="AsideCtrl">
       <ul class="nav nav-pills">
-        <li data-ng-class="{active: (shortLocale == 'fr')}">
-          <a href="#" class="fr" data-ng-click="locale='fr'">Français</a>
-        </li>
-        <li ng-class="{active: (shortLocale == 'en')}">
-          <a href="#" class="gb" data-ng-click="locale='en'">English</a>
-        </li>
-        <li ng-class="{active: (shortLocale == 'es')}">
-          <a href="#" class="es" data-ng-click="locale='es'">Español</a>
+        <li data-ng-repeat="label in trello.labels"
+            data-ng-show="label"
+            data-ng-class="{active: (shortLocale == label)}"
+            >
+          <a href="#" class="{{label}}" data-ng-click="$root.locale=label">{{ label | lang }}</a>
         </li>
       </ul>
 

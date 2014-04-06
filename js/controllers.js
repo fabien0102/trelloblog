@@ -4,7 +4,7 @@
 
 angular.module("trelloBlogControllers", [])
   .controller( "PostListCtrl", ["$scope", "Trello", function ( $scope, Trello ) {
-      $scope.dateFormat = 'fullDate';
+    $scope.dateFormat = 'fullDate';
 
     Trello.load();
     $scope.trello = Trello.blog();
@@ -14,4 +14,7 @@ angular.module("trelloBlogControllers", [])
     function ($scope) {
 
     }
-  ]);
+  ] )
+  .controller( "AsideCtrl", ["$scope", "Trello", function ( $scope, Trello ) {
+    $scope.trello = Trello.blog();
+  }] );
