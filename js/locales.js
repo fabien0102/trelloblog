@@ -1,10 +1,11 @@
-/**
- * Created by francois on 06/04/14.
- */
+"use strict";
+
+/* Locales */
 
 angular.module( "trelloBlogLocales", [] )
   .constant( "Locales", {
-    "en-gb": {
+    "default": "en",
+    "en": {
       "postedOn": "posted on"
     },
     "fr": {

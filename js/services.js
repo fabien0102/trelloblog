@@ -21,7 +21,22 @@ angular.module( "trelloBlogServices", [] )
 
     return {
       translate: function ( key ) {
-        return Locales[currentLocale][key];
+        var lang;
+
+        if ( _.has( Locales, currentLocale ) ) {
+          // Language_Region exist
+          lang = currentLocale;
+        } else {
+          if ( _.has( Locales, currentLocale.split( "-" )[0] ) ) {
+            // Language exist
+            lang = currentLocale.split( "-" )[0];
+          } else {
+            // Default language
+            lang = Locales.default;
+          }
+        }
+
+        return Locales[lang][key];
       }
     }
   }] );

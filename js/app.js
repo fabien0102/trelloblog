@@ -14,13 +14,6 @@ var app = angular.module( "trelloBlogApp", [
 ] )
   .config( ["tmhDynamicLocaleProvider", function ( tmhDynamicLocaleProvider ) {
     tmhDynamicLocaleProvider.localeLocationPattern( "bower_components/angular-i18n/angular-locale_{{locale}}.js" );
-  }] )
-  .run( ["$rootScope", "I18n", function ( $rootScope, I18n ) {
-
-    $rootScope.i18n = function ( key ) {
-      return I18n.translate( key );
-    };
-
   }] );
 
 //app.config([]);

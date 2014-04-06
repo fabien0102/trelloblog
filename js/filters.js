@@ -24,4 +24,9 @@ angular.module("trelloBlogFilters", [])
         return !draft;
       });
     };
-  });
+  } )
+  .filter( "i18n", ["I18n", function ( I18n ) {
+    return function ( key ) {
+      return I18n.translate( key );
+    };
+  }] );
