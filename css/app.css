@@ -116,6 +116,12 @@ h1, h2, h3, h4, h5, h6 {
   text-decoration : underline;
 }
 
+.pop-in {
+  -webkit-transform : scale(0);
+  -moz-transform    : scale(0);
+  transform         : scale(0);
+}
+
 .sidebar-pitch .nav {
   margin-bottom : 0.5em;
 }
