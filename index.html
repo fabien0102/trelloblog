@@ -124,7 +124,7 @@
     <aside class="sidebar-pitch col-sm-4" ng-controller="AsideCtrl">
       <ul class="nav nav-pills">
         <li data-ng-repeat="label in trello.labels"
-            data-ng-show="label"
+            data-ng-show="label | lang"
             data-ng-class="{active: (shortLocale == label)}"
             >
           <a href="#" class="{{label}}" data-ng-click="$root.locale=label">{{ label | lang }}</a>
