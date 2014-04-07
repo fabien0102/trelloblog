@@ -17,6 +17,8 @@ Writing posts and managing the blog becomes dead-easy and insanely fast!
 To contribute to the project, just clone it and execute `bower install` to
 retrieve dependencies.
 
+Execute `npm run config` and enter your Trello api key and your blog board id.
+
 That's it.
 
 ## Contributors
