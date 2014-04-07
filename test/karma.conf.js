@@ -5,7 +5,7 @@ module.exports = function ( config ) {
   config.set( {
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
-    basePath: '',
+    basePath: '../',
 
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
@@ -25,8 +25,8 @@ module.exports = function ( config ) {
       "bower_components/angular-bootstrap/ui-bootstrap.min.js",
       "bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js",
       "bower_components/angular-animate/angular-animate.min.js",
-      'js/*.js',
-      'test/**/*.js',
+      "bower_components/angular-mocks/angular-mocks.js",
+      'js/**/*.js',
       'test/**/*.js'
     ],
 
