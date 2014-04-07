@@ -17,7 +17,7 @@ angular.module("trelloBlogFilters", [])
       return _.filter(posts, function (post) {
         var draft = false;
         _.each(post.labels, function (label) {
-          if (label.name.toLowerCase() === "draft") {
+          if ( label.name.toLowerCase() === "unpublished" ) {
             draft = true;
           }
         });
