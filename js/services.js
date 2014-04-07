@@ -65,6 +65,14 @@ angular.module( "trelloBlogServices", [] )
             return new Date( post.due ).getTime();
           } ).reverse();
 
+          // Add members information into cards model
+          _.forEach( model.cards, function ( card ) {
+            card.members = [];
+            _.forEach( card.idMembers, function ( member ) {
+              card.members.push(_.findWhere(model.members, {id: member}));
+            } );
+          } );
+
         }, function ( res ) {
           model.error = 'Trello data access failed: ' + res.responseText;
         } );
