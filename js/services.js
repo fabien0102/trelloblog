@@ -5,8 +5,11 @@
 angular.module( "trelloBlogServices", [] )
   .service( "I18n", ["$rootScope", "tmhDynamicLocale", "LOCALES", "config",
     function ( $rootScope, tmhDynamicLocale, LOCALES, config ) {
+      // By default, use browser language
+      $rootScope.locale = navigator.language.toLocaleLowerCase();
+
       // Keep a reference of the current locale
-      var currentLocale;
+      var currentLocale = navigator.language.toLocaleLowerCase();
 
       // On locale change, load correct file and memorize locale
       $rootScope.$watch( "locale", function ( newLocale ) {
@@ -17,8 +20,6 @@ angular.module( "trelloBlogServices", [] )
         $rootScope.shortLocale = currentLocale.split( "-" )[0];
       } );
 
-      // By default, use browser language
-      $rootScope.locale = navigator.language.toLocaleLowerCase();
 
       return {
         translate: function ( key ) {
