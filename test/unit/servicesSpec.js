@@ -3,7 +3,82 @@
 describe( "Taab services", function () {
 
   beforeEach( module( "trelloBlogApp" ) );
-  beforeEach( module( "trelloBlogConfig" ) );
+
+  describe( "I18n", function () {
+    var $rootScope, tmhDynamicLocale, LOCALES, config, I18n;
+
+    beforeEach( function () {
+      // load our module and also provide some mock
+      module( "trelloBlogApp", function ( $provide ) {
+
+        tmhDynamicLocale = jasmine.createSpyObj( "tmhDynamicLocale", ["set"] );
+
+        $provide.value( "tmhDynamicLocale", tmhDynamicLocale );
+        $provide.constant( "config", { language: "en"} );
+        $provide.constant( "LOCALES", {
+          "en": { "foo": "en" },
+          "fr": { "foo": "fr" },
+          "fr-fr": { "foo": "fr-fr"}
+        } );
+      } );
+
+      // now we inject the service we"re testing.
+      inject( function ( _I18n_, _$rootScope_ ) {
+        $rootScope = _$rootScope_;
+        I18n = _I18n_;
+      } );
+    } );
+
+    it( "should initialize the locale to the browser default", function () {
+      expect( $rootScope.locale ).toEqual( navigator.language.toLocaleLowerCase() );
+    } );
+
+    it( "should propagate change of locale", function () {
+      $rootScope.locale = "en-gb";
+      $rootScope.$apply(); // Apply the change
+
+      expect( $rootScope.locale ).toEqual( "en-gb" );
+      expect( $rootScope.shortLocale ).toEqual( "en" );
+      expect( tmhDynamicLocale.set ).toHaveBeenCalledWith( "en-gb" );
+
+      $rootScope.locale = "fr-fr";
+      $rootScope.$apply(); // Apply the change
+
+      expect( $rootScope.locale ).toEqual( "fr-fr" );
+      expect( $rootScope.shortLocale ).toEqual( "fr" );
+      expect( tmhDynamicLocale.set ).toHaveBeenCalledWith( "fr-fr" );
+    } );
+
+    it( "should store locale in lower case", function () {
+      $rootScope.locale = "en-gb";
+      $rootScope.$apply(); // Apply the change
+
+      expect( $rootScope.locale ).toEqual( "en-gb" );
+      expect( $rootScope.shortLocale ).toEqual( "en" );
+      expect( tmhDynamicLocale.set ).toHaveBeenCalledWith( "en-gb" );
+    } );
+
+    it( "should use the lang+region translation", function () {
+      $rootScope.locale = "fr-fr";
+      $rootScope.$apply(); // Apply the change
+
+      expect( I18n.translate( "foo" ) ).toEqual( "fr-fr" );
+    } );
+
+    it( "should use the lang translation if no region", function () {
+      $rootScope.locale = "en-gb";
+      $rootScope.$apply(); // Apply the change
+
+      expect( I18n.translate( "foo" ) ).toEqual( "en" );
+    } );
+
+    it( "should use the default lang if no translation", function () {
+      $rootScope.locale = "ru";
+      $rootScope.$apply(); // Apply the change
+
+      expect( I18n.translate( "foo" ) ).toEqual( "en" );
+    } );
+  } );
 
   describe( "Trello", function () {
     var service, $httpBackend, requestUrl;
