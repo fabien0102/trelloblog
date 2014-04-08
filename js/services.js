@@ -55,7 +55,6 @@ angular.module( "trelloBlogServices", [] )
                    "/?key=" + config.trello.apiKey +
                    "&lists=open&cards=open&members=all" ).then( function ( res ) {
           model.ready = true;
-          console.log( res.data );
           model.name = res.data.name;
           model.desc = res.data.desc;
           model.lists = res.data.lists;

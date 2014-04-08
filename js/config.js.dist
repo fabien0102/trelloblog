@@ -8,7 +8,8 @@ angular.module( "trelloBlogConfig", [] )
     "language": "fr",
     "trello": {
       "board": "$BOARD$",
-      "apiKey": "$APIKEY$" // Generated at https://trello.com/1/appKey/generate
+      "apiKey": "$API_KEY$", // Generated at https://trello.com/1/appKey/generate
+      "draftLabel": "$DRAFT_LABEL$"
     },
     "animations": {
       "slide-in": {

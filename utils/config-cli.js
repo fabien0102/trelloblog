@@ -17,12 +17,17 @@ Prompt.get( [
     name: "trelloBoardId",
     description: "Trello board id",
     default: "c94SaRKm"
+  }, {
+    name: "draftLabel",
+    description: "Name of draft label",
+    default: "unpublished"
   }
 ], function ( err, prompt ) {
   var file = Fs.readFileSync("js/config.js.dist" ).toString();
 
   file = file.replace("$BOARD$", prompt.trelloBoardId);
-  file = file.replace("$APIKEY$", prompt.trelloApiKey);
+  file = file.replace("$API_KEY$", prompt.trelloApiKey);
+  file = file.replace("$DRAFT_LABEL$", prompt.draftLabel);
 
   Fs.writeFileSync("js/config.js", file);
   console.log( "Congratulations! You are ready to change the world with your new blog!" );
