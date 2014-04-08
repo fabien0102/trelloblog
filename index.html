@@ -102,7 +102,12 @@
                 <time datetime="{{ post.due }}" pubdate="">
                   {{ post.due | date: dateFormat }}
                 </time>
-              </span><!-- /.post-title -->
+              </span>
+              <ul class="post-tags">
+                <li class="slide-in" ng-repeat="tag in post.checklists | tags">
+                  <a href="#"><span class="glyphicon glyphicon-tag"></span> {{ tag.name }}</a>
+                </li>
+              </ul>
             </div>
             <span class="post-authors col-sm-2"
                   data-ng-show="post.members">
