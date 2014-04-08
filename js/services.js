@@ -3,6 +3,7 @@
 /* Services */
 
 angular.module( "trelloBlogServices", [] )
+
   .service( "I18n", ["$rootScope", "tmhDynamicLocale", "LOCALES", "config",
     function ( $rootScope, tmhDynamicLocale, LOCALES, config ) {
       // Keep a reference of the current locale
@@ -41,6 +42,7 @@ angular.module( "trelloBlogServices", [] )
         }
       }
     }] )
+
   .service( "Trello", ["$http", "config", function ( $http, config ) {
 
     var model = {
@@ -53,11 +55,13 @@ angular.module( "trelloBlogServices", [] )
         // TODO Remove unused elements
         $http.get( "https://api.trello.com/1/boards/" + config.trello.board +
                    "/?key=" + config.trello.apiKey +
-                   "&lists=open&cards=open&members=all" ).then( function ( res ) {
+                   "&lists=open&cards=open&members=all&card_checklists=all" ).then( function ( res ) {
+
           model.ready = true;
           model.name = res.data.name;
           model.desc = res.data.desc;
           model.lists = res.data.lists;
+          model.checklists = res.data.checklists;
           model.members = res.data.members;
           model.labels = res.data.labelNames;
 

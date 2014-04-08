@@ -22,7 +22,7 @@ describe( "Taab services", function () {
       service = Trello;
       requestUrl = "https://api.trello.com/1/boards/" + config.trello.board +
                    "/?key=" + config.trello.apiKey +
-                   "&lists=open&cards=open&members=all";
+                   "&lists=open&cards=open&members=all&card_checklists=all";
     } ) );
 
     it( "should defined the correct interface", function () {
@@ -62,6 +62,7 @@ describe( "Taab services", function () {
       expect( blog.name ).toEqual( response.name );
       expect( blog.desc ).toEqual( response.desc );
       expect( blog.lists ).toEqual( response.lists );
+      expect( blog.checklists ).toEqual( response.checklists );
       expect( blog.members ).toEqual( response.members );
       expect( blog.labels ).toEqual( response.labelNames );
       expect( blog.cards ).toEqual( response.cards );
