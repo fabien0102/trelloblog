@@ -21,6 +21,17 @@ Execute `npm run config` and enter your Trello api key and your blog board id.
 
 That's it.
 
+## Running the test suite
+
+You can run the unit test suite by executing `npm test` (or `npm run test-single-run`
+if you want to run the test only once).
+
+Before running the end-to-end test suite, you have to execute `npm run update-webdriver`
+(only the first time).
+
+Make sure you have a server running (`npm start` will give you one) and execute
+`npm run protractor`.
+
 ## Contributors
 
 This insane *- but genious -* idea was from [Fabien Bernard](https://twitter.com/fabien0102).
