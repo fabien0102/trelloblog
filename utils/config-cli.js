@@ -7,9 +7,18 @@ Prompt.start();
 Prompt.message = "Taab";
 
 console.log( "Trello as a blog" );
-console.log( "To generate an API key : https://trello.com/1/appKey/generate" );
 
-Prompt.get( ["trelloApiKey", "trelloBoardId"], function ( err, prompt ) {
+Prompt.get( [
+  {
+    name: "trelloApiKey",
+    description: "Trello api key (https://trello.com/1/appKey/generate)",
+    default: "5af287a3734f0af280d09c2d3d0e3914"
+  }, {
+    name: "trelloBoardId",
+    description: "Trello board id",
+    default: "c94SaRKm"
+  }
+], function ( err, prompt ) {
   var file = Fs.readFileSync("js/config.js.dist" ).toString();
 
   file = file.replace("$BOARD$", prompt.trelloBoardId);
