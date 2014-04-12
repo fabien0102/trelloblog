@@ -3,6 +3,16 @@
 var Prompt = require( "prompt" );
 var Fs = require( "fs" );
 
+// Test hack (should use minimist)
+if(process.env.ENVIRONMENT === "test") {
+  var file = Fs.readFileSync("js/config.js.dist" ).toString();
+  file = file.replace("$BOARD$", "c94SaRKm");
+  file = file.replace("$API_KEY$", "5af287a3734f0af280d09c2d3d0e3914");
+  file = file.replace("$DRAFT_LABEL$", "unpublished");
+  Fs.writeFileSync("js/config.js", file);
+  process.exit(0);
+}
+
 Prompt.start();
 Prompt.message = "Taab";
 
