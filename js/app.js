@@ -5,11 +5,11 @@
 var app = angular.module( "trelloBlogApp", [
   "trelloBlogControllers",
   "trelloBlogConfig",
+  "TrelloBlogDirectives",
   "trelloBlogLocales",
   "trelloBlogServices",
   "trelloBlogFilters",
   "trelloBlogAnimations",
-  "btford.markdown",
   "ui.bootstrap",
   "tmh.dynamicLocale"
 ] )
