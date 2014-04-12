@@ -1,4 +1,4 @@
-Trello As A Blog [![GitHub version](https://badge.fury.io/gh/fabien0102/trelloblog.svg)](http://badge.fury.io/gh/fabien0102/trelloblog) [![Build Status](https://travis-ci.org/fabien0102/trelloblog.svg?branch=master)](https://travis-ci.org/fabien0102/trelloblog)
+Trello As A Blog [![GitHub version](https://badge.fury.io/gh/fabien0102%2Ftrelloblog.svg)](http://badge.fury.io/gh/fabien0102%2Ftrelloblog) [![Build Status](https://travis-ci.org/fabien0102/trelloblog.svg?branch=master)](https://travis-ci.org/fabien0102/trelloblog)
 ==========
 
 ## Context
