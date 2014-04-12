@@ -21,7 +21,6 @@ module.exports = function ( config ) {
       "bower_components/angular-dynamic-locale/src/tmhDynamicLocale.js",
       "bower_components/angular-sanitize/angular-sanitize.min.js",
       "bower_components/showdown/compressed/showdown.js",
-      "bower_components/angular-markdown-directive/markdown.js",
       "bower_components/angular-bootstrap/ui-bootstrap.min.js",
       "bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js",
       "bower_components/angular-animate/angular-animate.min.js",
