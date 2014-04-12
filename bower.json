@@ -26,7 +26,7 @@
     "angular-dynamic-locale": "~0.1.6",
     "gsap": "~1.11.6",
     "angular-animate": "~1.2.16",
-    "angular-emoji": "~0.0.4"
+    "angular-emoji": "~0.1.0"
   },
   "resolutions": {
     "angular": "~1.2.16"
