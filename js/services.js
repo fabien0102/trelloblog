@@ -72,7 +72,6 @@ angular.module( "trelloBlogServices", [] )
             } );
           } );
           $rootScope.offline = false;
-          console.log( "serv online", $rootScope );
 
           localStorage.setItem( "model", JSON.stringify( model ) );
         }, function ( res ) {
@@ -80,15 +79,16 @@ angular.module( "trelloBlogServices", [] )
 
           model.error = 'Trello data access failed: ' + res.responseText;
           $rootScope.offline = true;
-          model.name = local.name;
-          model.desc = local.desc;
-          model.lists = local.lists;
-          model.members = local.members;
-          model.labels = local.labelNames;
-          model.cards = local.cards;
-          model.members = local.members;
 
-          console.log( "serv offline", $rootScope );
+          if ( local !== null ) {
+            model.name = local.name;
+            model.desc = local.desc;
+            model.lists = local.lists;
+            model.members = local.members;
+            model.labels = local.labelNames;
+            model.cards = local.cards;
+            model.members = local.members;
+          }
         } );
       },
 
