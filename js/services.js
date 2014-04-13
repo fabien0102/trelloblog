@@ -42,10 +42,9 @@ angular.module( "trelloBlogServices", [] )
         }
       }
     }] )
-  .service( "Trello", ["$http", "config", function ( $http, config ) {
+  .service( "Trello", ["$http", "config", "$rootScope", function ( $http, config, $rootScope ) {
 
     var model = {
-      ready: false,
       error: null
     };
 
@@ -55,7 +54,6 @@ angular.module( "trelloBlogServices", [] )
         $http.get( "https://api.trello.com/1/boards/" + config.trello.board +
                    "/?key=" + config.trello.apiKey +
                    "&lists=open&cards=open&members=all" ).then( function ( res ) {
-          model.ready = true;
           model.name = res.data.name;
           model.desc = res.data.desc;
           model.lists = res.data.lists;
@@ -70,12 +68,27 @@ angular.module( "trelloBlogServices", [] )
           _.forEach( model.cards, function ( card ) {
             card.members = [];
             _.forEach( card.idMembers, function ( member ) {
-              card.members.push(_.findWhere(model.members, {id: member}));
+              card.members.push( _.findWhere( model.members, {id: member} ) );
             } );
           } );
+          $rootScope.offline = false;
+          console.log( "serv online", $rootScope );
 
+          localStorage.setItem( "model", JSON.stringify( model ) );
         }, function ( res ) {
+          var local = JSON.parse( localStorage.getItem( "model" ) );
+
           model.error = 'Trello data access failed: ' + res.responseText;
+          $rootScope.offline = true;
+          model.name = local.name;
+          model.desc = local.desc;
+          model.lists = local.lists;
+          model.members = local.members;
+          model.labels = local.labelNames;
+          model.cards = local.cards;
+          model.members = local.members;
+
+          console.log( "serv offline", $rootScope );
         } );
       },
 

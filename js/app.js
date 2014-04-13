@@ -15,6 +15,15 @@ var app = angular.module( "trelloBlogApp", [
 ] )
   .config( ["tmhDynamicLocaleProvider", function ( tmhDynamicLocaleProvider ) {
     tmhDynamicLocaleProvider.localeLocationPattern( "bower_components/angular-i18n/angular-locale_{{locale}}.js" );
-  }] );
+  }] )
+  .run( ["$rootScope", function ( $rootScope ) {
+    window.addEventListener( "online", function () {
+      $rootScope.offline = false;
+      $rootScope.$apply();
+    } );
 
-//app.config([]);
+    window.addEventListener( "offline", function () {
+      $rootScope.offline = true;
+      $rootScope.$apply();
+    } );
+  }] );
