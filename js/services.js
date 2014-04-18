@@ -84,6 +84,7 @@ angular.module( "trelloBlogServices", [] )
             model.name = local.name;
             model.desc = local.desc;
             model.lists = local.lists;
+            model.checklists = local.checklists;
             model.members = local.members;
             model.labels = local.labelNames;
             model.cards = local.cards;
