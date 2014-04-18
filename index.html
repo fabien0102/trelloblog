@@ -3,32 +3,27 @@
 <head>
   <meta charset="utf-8">
   <title>Trello As A Blog</title>
-  <link rel="stylesheet"
-        href="bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css"/>
   <link rel="stylesheet" href="css/app.css"/>
+  <link rel="stylesheet" href="bower_components/angular-emoji/angular-emoji.css"/>
 
   <script src="bower_components/lodash/dist/lodash.min.js"></script>
   <script src="bower_components/jquery/jquery.min.js"></script>
   <script src="bower_components/gsap/src/minified/TweenMax.min.js"></script>
   <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
   <script src="bower_components/angular/angular.min.js"></script>
-  <script
-      src="bower_components/angular-dynamic-locale/src/tmhDynamicLocale.js"></script>
-  <script
-      src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+  <script src="bower_components/angular-dynamic-locale/src/tmhDynamicLocale.js"></script>
+  <script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
   <script src="bower_components/showdown/compressed/showdown.js"></script>
-  <script
-      src="bower_components/angular-markdown-directive/markdown.js"></script>
   <script src="bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
-  <script
-      src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
-  <script
-      src="bower_components/angular-animate/angular-animate.min.js"></script>
+  <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.min.js"></script>
 
   <script src="js/app.js"></script>
   <script src="js/controllers.js"></script>
   <script src="js/config.js"></script>
   <script src="js/filters.js"></script>
+  <script src="js/directives.js"></script>
   <script src="js/services.js"></script>
   <script src="js/animations.js"></script>
   <script src="js/locales.js"></script>
@@ -37,8 +32,8 @@
 
 <main class="container-fluid">
   <div class="row">
-    <nav class="navbar navbar-default" role="navigation">
-      <div class="container-fluid">
+    <nav class="navbar" role="navigation" ng-class="{'navbar-default': !offline,'navbar-inverse': offline}">
+    <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse"
@@ -120,8 +115,7 @@
             </span><!-- /.post-authors -->
           </div>
           <!-- /.row -->
-
-          <p class="post-content" data-btf-markdown="post.desc"></p>
+          <p class="post-content" data-markdown="post.desc"></p>
         </li>
       </ul>
     </section>
@@ -135,7 +129,6 @@
           <a href="#" class="{{label}}" data-ng-click="$root.locale=label">{{ label | lang }}</a>
         </li>
       </ul>
-
       Here is a POC of a blog where posts are managed directly from a Trello
       board. Please have a look at <a
         href="https://github.com/fabien0102/trelloblog">the project repo</a>.

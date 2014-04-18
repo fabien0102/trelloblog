@@ -14,19 +14,19 @@ angular.module( "trelloBlogFilters", [] )
     };
   } )
 
-  .filter( "published", function () {
+  .filter( "published", ["config", function ( config ) {
     return function ( posts ) {
       return _.filter( posts, function ( post ) {
         var draft = false;
         _.each( post.labels, function ( label ) {
-          if ( label.name.toLowerCase() === "unpublished" ) {
+          if ( label.name.toLowerCase() === config.trello.draftLabel ) {
             draft = true;
           }
         } );
         return !draft;
       } );
     };
-  } )
+  }] )
 
   .filter( "currentLanguage", ["config", function ( config ) {
     var filter;

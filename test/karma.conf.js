@@ -21,13 +21,12 @@ module.exports = function ( config ) {
       "bower_components/angular-dynamic-locale/src/tmhDynamicLocale.js",
       "bower_components/angular-sanitize/angular-sanitize.min.js",
       "bower_components/showdown/compressed/showdown.js",
-      "bower_components/angular-markdown-directive/markdown.js",
       "bower_components/angular-bootstrap/ui-bootstrap.min.js",
       "bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js",
       "bower_components/angular-animate/angular-animate.min.js",
       "bower_components/angular-mocks/angular-mocks.js",
       'js/**/*.js',
-      'test/**/*.js'
+      'test/unit/**/*.js'
     ],
 
     // list of files to exclude
@@ -38,13 +37,13 @@ module.exports = function ( config ) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-
+      'js/*.js': ['coverage']
     },
 
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: ['progress'],
+    reporters: ['progress', 'coverage'],
 
     // web server port
     port: 9876,
@@ -65,6 +64,12 @@ module.exports = function ( config ) {
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
-    singleRun: false
+    singleRun: false,
+
+    // optionally, configure the reporter
+    coverageReporter: {
+      type: 'lcov',
+      dir: 'coverage/'
+    }
   } );
 };
