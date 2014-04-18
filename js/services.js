@@ -55,10 +55,14 @@ angular.module( "trelloBlogServices", [] )
                    "&lists=open&cards=open&members=all&card_checklists=all" ).then( function ( res ) {
           model.name = res.data.name;
           model.desc = res.data.desc;
-          model.lists = res.data.lists;
           model.checklists = res.data.checklists;
           model.members = res.data.members;
           model.labels = res.data.labelNames;
+
+          // Filter `[name]` pattern
+          model.lists = _.filter( res.data.lists, function (list) {
+            return !/^\[.*\]$/.exec(list.name);
+          });
 
           model.cards = _.sortBy( res.data.cards, function ( post ) {
             return new Date( post.due ).getTime();
