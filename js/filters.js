@@ -77,7 +77,9 @@ angular.module( "trelloBlogFilters", [] )
 
   .filter( "tags", [function () {
     return function ( checklists ) {
-      var tagChecklist = _.filter( checklists, { name: "Tags" } )[0] || {checkItems: []};
+      var tagChecklist = _.filter( checklists, function(checklist){
+        return checklist.name.toLowerCase() === "tags";
+      })[0] || {checkItems: []};
       return tagChecklist.checkItems;
     };
   }] );
