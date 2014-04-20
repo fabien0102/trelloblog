@@ -87,6 +87,7 @@ angular.module( "trelloBlogServices", [] )
                 } );
               }
             } );
+            list.tags = _.sortBy(list.tags);
           } );
 
           $rootScope.offline = false;
