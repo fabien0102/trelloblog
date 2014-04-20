@@ -55,14 +55,13 @@ angular.module( "trelloBlogServices", [] )
                    "&lists=open&cards=open&members=all&card_checklists=all" ).then( function ( res ) {
           model.name = res.data.name;
           model.desc = res.data.desc;
-          model.checklists = res.data.checklists;
           model.members = res.data.members;
           model.labels = res.data.labelNames;
 
           // Filter `[name]` pattern
-          model.lists = _.filter( res.data.lists, function (list) {
-            return !/^\[.*\]$/.exec(list.name);
-          });
+          model.lists = _.filter( res.data.lists, function ( list ) {
+            return !/^\[.*\]$/.exec( list.name );
+          } );
 
           model.cards = _.sortBy( res.data.cards, function ( post ) {
             return new Date( post.due ).getTime();
@@ -75,6 +74,21 @@ angular.module( "trelloBlogServices", [] )
               card.members.push( _.findWhere( model.members, {id: member} ) );
             } );
           } );
+
+          // Add tags checklist information into lists model
+          _.forEach( model.lists, function ( list ) {
+            list.tags = [];
+            _.forEach( model.cards, function ( card ) {
+              if ( card.idList === list.id ) {
+                _.forEach( card.checklists, function ( checklist ) {
+                  if ( checklist.name.toLowerCase() === "tags" ) {
+                    list.tags = _.union( _.flatten( checklist.checkItems, "name" ), list.tags )
+                  }
+                } );
+              }
+            } );
+          } );
+
           $rootScope.offline = false;
 
           localStorage.setItem( "model", JSON.stringify( model ) );
@@ -88,7 +102,6 @@ angular.module( "trelloBlogServices", [] )
             model.name = local.name;
             model.desc = local.desc;
             model.lists = local.lists;
-            model.checklists = local.checklists;
             model.members = local.members;
             model.labels = local.labelNames;
             model.cards = local.cards;
