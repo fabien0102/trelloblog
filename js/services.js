@@ -67,18 +67,18 @@ angular.module( "trelloBlogServices", [] )
             return new Date( post.due ).getTime();
           } ).reverse();
 
-          // Add members information into cards model
-          _.forEach( model.cards, function ( card ) {
-            card.members = [];
-            _.forEach( card.idMembers, function ( member ) {
-              card.members.push( _.findWhere( model.members, {id: member} ) );
-            } );
-          } );
-
-          // Add tags checklist information into lists model
+          // Consolidate Trello data
           _.forEach( model.lists, function ( list ) {
             list.tags = [];
             _.forEach( model.cards, function ( card ) {
+
+              // Add members information into cards model
+              card.members = [];
+              _.forEach( card.idMembers, function ( member ) {
+                card.members.push( _.findWhere( model.members, {id: member} ) );
+              } );
+
+              // Add tags checklist information into lists model
               if ( card.idList === list.id ) {
                 _.forEach( card.checklists, function ( checklist ) {
                   if ( checklist.name.toLowerCase() === "tags" ) {
