@@ -94,20 +94,9 @@ angular.module( "trelloBlogServices", [] )
 
           localStorage.setItem( "model", JSON.stringify( model ) );
         }, function ( res ) {
-          var local = JSON.parse( localStorage.getItem( "model" ) );
-
+          model = _.extend( model, JSON.parse( localStorage.getItem( "model" ) ) );
           model.error = 'Trello data access failed: ' + res.responseText;
           $rootScope.offline = true;
-
-          if ( local !== null ) {
-            model.name = local.name;
-            model.desc = local.desc;
-            model.lists = local.lists;
-            model.members = local.members;
-            model.labels = local.labelNames;
-            model.cards = local.cards;
-            model.members = local.members;
-          }
         } );
       },
 
