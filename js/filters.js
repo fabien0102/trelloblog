@@ -56,6 +56,26 @@ angular.module( "trelloBlogFilters", [] )
     return filter;
   }] )
 
+  .filter( "category", ["$rootScope", function ( $rootScope ) {
+    return function ( posts ) {
+      if ( $rootScope.category ) {
+        return _.filter( posts, {idList: $rootScope.category} );
+      } else if ( $rootScope.subcategory ) {
+        return _.filter( posts, function ( post ) {
+          var inThisSubCategory = false;
+          _.forEach( post.checklists, function ( checklist ) {
+            if ( checklist.name.toLowerCase() === "tags" ) {
+              if ( _.find( checklist.checkItems, {name: $rootScope.subcategory} ) ) inThisSubCategory = true;
+            }
+          } );
+          return inThisSubCategory;
+        } );
+      } else {
+        return posts;
+      }
+    }
+  }] )
+
   .filter( "i18n", ["I18n", function ( I18n ) {
     return function ( key ) {
       return I18n.translate( key );
@@ -77,9 +97,9 @@ angular.module( "trelloBlogFilters", [] )
 
   .filter( "tags", [function () {
     return function ( checklists ) {
-      var tagChecklist = _.filter( checklists, function(checklist){
+      var tagChecklist = _.filter( checklists, function ( checklist ) {
         return checklist.name.toLowerCase() === "tags";
-      })[0] || {checkItems: []};
+      } )[0] || {checkItems: []};
       return tagChecklist.checkItems;
     };
   }] );
