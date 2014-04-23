@@ -188,6 +188,9 @@ describe( "Taab services", function () {
 
       it( "should add member information in each cards", function () {
         $httpBackend.expectGET( requestUrl ).respond( {
+          lists: [
+            {id: "533f122757218a7e2c84c2cb", name: "Catégorie 1"}
+          ],
           cards: [
             {idMembers: [ "51dad2ce8cdcf73a320018c5" ], due: 1},
             {idMembers: [ "51843f636ef14b8a690062dc" ], due: 2},
