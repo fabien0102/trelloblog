@@ -95,6 +95,10 @@ angular.module( "trelloBlogServices", [] )
           localStorage.setItem( "model", JSON.stringify( model ) );
         }, function ( res ) {
           model = _.extend( model, JSON.parse( localStorage.getItem( "model" ) ) );
+
+          // Use a predictable name for labels.
+          model.labels = model.labelNames;
+
           model.error = 'Trello data access failed: ' + res.responseText;
           $rootScope.offline = true;
         } );

@@ -144,7 +144,6 @@ describe( "Taab services", function () {
         expect( blog.name ).toEqual( response.name );
         expect( blog.desc ).toEqual( response.desc );
         expect( blog.lists ).toEqual( response.lists );
-        expect( blog.checklists ).toEqual( response.checklists );
         expect( blog.members ).toEqual( response.members );
         expect( blog.labels ).toEqual( response.labelNames );
         expect( blog.cards ).toEqual( response.cards );
