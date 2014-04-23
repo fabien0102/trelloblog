@@ -97,7 +97,7 @@ describe( "Taab services", function () {
       service = Trello;
       requestUrl = "https://api.trello.com/1/boards/" + config.trello.board +
                    "/?key=" + config.trello.apiKey +
-                   "&lists=open&cards=open&members=all";
+                   "&lists=open&cards=open&members=all&card_checklists=all";
     } ) );
 
     beforeEach( function () {
@@ -187,6 +187,9 @@ describe( "Taab services", function () {
 
       it( "should add member information in each cards", function () {
         $httpBackend.expectGET( requestUrl ).respond( {
+          lists: [
+            {id: "533f122757218a7e2c84c2cb", name: "Catégorie 1"}
+          ],
           cards: [
             {idMembers: [ "51dad2ce8cdcf73a320018c5" ], due: 1},
             {idMembers: [ "51843f636ef14b8a690062dc" ], due: 2},

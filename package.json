@@ -11,7 +11,7 @@
     "update-webdriver": "webdriver-manager update",
     "protractor": "protractor test/protractor-conf.js",
     "publish": "node utils/publish.js",
-    "travis-unit": "./node_modules/karma/bin/karma start test/karma.conf.js  --single-run --browsers Firefox"
+    "travis-unit": "node node_modules/karma/bin/karma start test/karma.conf.js  --single-run --browsers Firefox"
   },
   "repository": {
     "type": "git",

@@ -106,6 +106,38 @@ h1, h2, h3, h4, h5, h6 {
   font-style : normal;
 }
 
+.post-tags {
+  display         : inline-block;
+  list-style-type : none;
+}
+
+.post-tags li {
+  display       : inline-block;
+  margin-right  : 0.8em;
+  border        : 1px #2A79A6 solid;
+  border-radius : 3px;
+  font-size     : 0.8em;
+  padding       : 0.2em 0.5em;
+}
+
+.post-tags li:hover {
+  border : 1px #393939 solid;
+}
+
+.post-tags a {
+  color   : #2A79A6;
+  display : block;
+  height  : 100%;
+  width   : 100%;
+}
+
+.post-tags a:hover,
+.post-tags a:focus,
+.post-tags a:active {
+  text-decoration : none;
+  color           : #393939;
+}
+
 .sidebar-pitch {
   margin-top : 1.625em;
   color      : #999;
@@ -137,15 +169,19 @@ h1, h2, h3, h4, h5, h6 {
   background-size : 21px;
   padding-left    : 41px;
 }
+
 .sidebar-pitch .nav a:hover {
   background-color : #FFF;
 }
+
 .sidebar-pitch .nav a.fr {
   background-image : url("https://raw.githubusercontent.com/arvida/emoji-cheat-sheet.com/master/public/graphics/emojis/fr.png");
 }
+
 .sidebar-pitch .nav a.en {
   background-image : url("https://raw.githubusercontent.com/arvida/emoji-cheat-sheet.com/master/public/graphics/emojis/gb.png");
 }
+
 .sidebar-pitch .nav a.es {
   background-image : url("https://raw.githubusercontent.com/arvida/emoji-cheat-sheet.com/master/public/graphics/emojis/es.png");
 }

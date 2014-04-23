@@ -4,13 +4,13 @@ var Prompt = require( "prompt" );
 var Fs = require( "fs" );
 
 // Test hack (should use minimist)
-if(process.env.ENVIRONMENT === "test") {
-  var file = Fs.readFileSync("js/config.js.dist" ).toString();
-  file = file.replace("$BOARD$", "c94SaRKm");
-  file = file.replace("$API_KEY$", "5af287a3734f0af280d09c2d3d0e3914");
-  file = file.replace("$DRAFT_LABEL$", "unpublished");
-  Fs.writeFileSync("js/config.js", file);
-  process.exit(0);
+if ( process.env.ENVIRONMENT === "test" ) {
+  var file = Fs.readFileSync( "js/config.js.dist" ).toString();
+  file = file.replace( "$BOARD$", "c94SaRKm" );
+  file = file.replace( "$API_KEY$", "5af287a3734f0af280d09c2d3d0e3914" );
+  file = file.replace( "$UNPUBLISHED_LABEL$", "unpublished" );
+  Fs.writeFileSync( "js/config.js", file );
+  process.exit( 0 );
 }
 
 Prompt.start();
@@ -22,23 +22,25 @@ Prompt.get( [
   {
     name: "trelloApiKey",
     description: "Trello api key (https://trello.com/1/appKey/generate)",
-    default: "5af287a3734f0af280d09c2d3d0e3914"
-  }, {
+    default: "5af287a3734f0af280d09c2d3d0e3914"
+  },
+  {
     name: "trelloBoardId",
     description: "Trello board id",
     default: "c94SaRKm"
-  }, {
-    name: "draftLabel",
-    description: "Name of draft label",
+  },
+  {
+    name: "unpublishedLabel",
+    description: "Name of unpublished label",
     default: "unpublished"
   }
 ], function ( err, prompt ) {
-  var file = Fs.readFileSync("js/config.js.dist" ).toString();
+  var file = Fs.readFileSync( "js/config.js.dist" ).toString();
 
-  file = file.replace("$BOARD$", prompt.trelloBoardId);
-  file = file.replace("$API_KEY$", prompt.trelloApiKey);
-  file = file.replace("$DRAFT_LABEL$", prompt.draftLabel);
+  file = file.replace( "$BOARD$", prompt.trelloBoardId );
+  file = file.replace( "$API_KEY$", prompt.trelloApiKey );
+  file = file.replace( "$UNPUBLISHED_LABEL$", prompt.unpublishedLabel );
 
-  Fs.writeFileSync("js/config.js", file);
+  Fs.writeFileSync( "js/config.js", file );
   console.log( "Congratulations! You are ready to change the world with your new blog!" );
 } );
