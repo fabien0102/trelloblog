@@ -17,13 +17,13 @@ angular.module( "trelloBlogFilters", [] )
   .filter( "published", ["config", function ( config ) {
     return function ( posts ) {
       return _.filter( posts, function ( post ) {
-        var draft = false;
+        var isPublished = true;
         _.each( post.labels, function ( label ) {
-          if ( label.name.toLowerCase() === config.trello.draftLabel ) {
-            draft = true;
+          if ( label.name.toLowerCase() === config.trello.unpublishedLabel.toLowerCase() ) {
+            isPublished = false;
           }
         } );
-        return !draft;
+        return isPublished;
       } );
     };
   }] )

@@ -9,7 +9,7 @@ angular.module( "trelloBlogConfig", [] )
     "trello": {
       "board": "$BOARD$",
       "apiKey": "$API_KEY$", // Generated at https://trello.com/1/appKey/generate
-      "draftLabel": "$DRAFT_LABEL$"
+      "unpublishedLabel": "$UNPUBLISHED_LABEL$"
     },
     "animations": {
       "slide-in": {

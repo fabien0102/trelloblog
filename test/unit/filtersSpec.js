@@ -4,7 +4,7 @@ describe( "Taab filters", function () {
 
   beforeEach( module( "trelloBlogApp" ) );
 
-  var I18n, config = {trello: {draftLabel: "draft"}};
+  var I18n, config = {trello: {unpublishedLabel: "unpublished"}};
   beforeEach( module( "trelloBlogApp", function ( $provide ) {
 
     I18n = {translate: function () { return "foo"; }};
@@ -51,7 +51,7 @@ describe( "Taab filters", function () {
     var publishedFilter;
     var posts = [
       {labels: [
-        {name: "draft"}
+        {name: "unpublished"}
       ]},
       {labels: [
         {name: "es"}
@@ -60,7 +60,7 @@ describe( "Taab filters", function () {
         {name: "en"}
       ]},
       {labels: [
-        {name: "draft"}
+        {name: "unpublished"}
       ]}
     ];
 
@@ -70,7 +70,7 @@ describe( "Taab filters", function () {
       } );
     } );
 
-    it( "should filter out any post with the `draft` label", function () {
+    it( "should filter out any post with the `unpublished` label", function () {
       expect( publishedFilter( posts ).length ).toEqual( 2 );
       expect( publishedFilter( posts ) ).toEqual( [
         {labels: [
