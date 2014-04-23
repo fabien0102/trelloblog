@@ -5,8 +5,8 @@ describe( "Taab filters", function () {
   beforeEach( module( "trelloBlogApp" ) );
 
   var I18n, config = {trello: {unpublishedLabel: "unpublished"}};
-  beforeEach( module( "trelloBlogApp", function ( $provide ) {
 
+  beforeEach( module( "trelloBlogApp", function ( $provide ) {
     I18n = {translate: function () { return "foo"; }};
     $provide.value( "I18n", I18n );
     $provide.constant( "config", config );
@@ -235,6 +235,26 @@ describe( "Taab filters", function () {
 
     it( "should return undefined if name of the code is not defined", function () {
       expect( langFilter( "ru" ) ).toBeUndefined();
+    } );
+
+  } );
+
+  describe( "tags", function () {
+    var tagsFilter;
+    var checklists = [
+      {name: "banana"},
+      {name: "Tags", checkItems: ["css", "lorem ipsum"]},
+      {name: "tags", checkItems: ["plop"]}
+    ];
+
+    beforeEach( function () {
+      inject( function ( _tagsFilter_ ) {
+        tagsFilter = _tagsFilter_;
+      } );
+    } );
+
+    it( "should return the array of tags from the first `tags` checklists", function () {
+      expect( tagsFilter( checklists ) ).toEqual( ["css", "lorem ipsum"] );
     } );
 
   } );
