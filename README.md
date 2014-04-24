@@ -14,12 +14,13 @@ Writing posts and managing the blog becomes dead-easy and insanely fast!
 
 ## Initialization
 
-To contribute to the project, just clone it and execute `bower install` to
-retrieve dependencies.
+To contribute to the project:
 
-Execute `npm run config` and enter your Trello api key and your blog board id.
+- *[captain obvious]* clone the repo
+- execute `npm install` to retrieve dependencies
+- execute `npm run config` to set up your configuration file
 
-That's it.
+That's it!
 
 ## Running the test suite
 
@@ -34,7 +35,7 @@ Make sure you have a server running (`npm start` will give you one) and execute
 
 ## Contributors
 
-This insane *- but genious -* idea was from [Fabien Bernard](https://twitter.com/fabien0102).
+This insane *- but awesome -* idea was from [Fabien Bernard](https://twitter.com/fabien0102).
 
 He was joined in his madness by [Nicolas Carlo](https://twitter.com/nicoespeon)
 and [François Monniot](https://twitter.com/fmonniot).
