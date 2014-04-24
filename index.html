@@ -100,7 +100,8 @@
               </span>
               <ul class="post-tags">
                 <li class="slide-in" data-ng-repeat="tag in post.checklists | tags">
-                <a href="#"><span class="glyphicon glyphicon-tag"></span> {{ tag.name }}</a>
+                  <a href="#" data-ng-click="$root.subcategory=tag.name; $root.category=null"><span
+                      class="glyphicon glyphicon-tag"></span> {{ tag.name }}</a>
                 </li>
               </ul>
             </div>
