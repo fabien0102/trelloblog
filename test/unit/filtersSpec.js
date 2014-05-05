@@ -35,15 +35,15 @@ describe( "Taab filters", function () {
     } );
 
     it( "should exclude all date in the future or null", function () {
-      expect( notPastDueFilter( posts ).length ).toEqual( 2 );
-      expect( notPastDueFilter( posts ) ).toEqual( [
+      expect( notPastDueFilter( posts ).length ).to.equal( 2 );
+      expect( notPastDueFilter( posts ) ).to.eql( [
         {due: JSON.stringify( yesterday ).slice( 1, 25 )},
         {due: JSON.stringify( today ).slice( 1, 25 )}
       ] );
     } );
 
     it( "should return undefined if no array is passed", function () {
-      expect( notPastDueFilter( {} ) ).toBeUndefined();
+      expect( notPastDueFilter( {} ) ).to.be.undefined;
     } );
   } );
 
@@ -71,8 +71,8 @@ describe( "Taab filters", function () {
     } );
 
     it( "should filter out any post with the `unpublished` label", function () {
-      expect( publishedFilter( posts ).length ).toEqual( 2 );
-      expect( publishedFilter( posts ) ).toEqual( [
+      expect( publishedFilter( posts ).length ).to.equal( 2 );
+      expect( publishedFilter( posts ) ).to.eql( [
         {labels: [
           {name: "es"}
         ]},
@@ -118,19 +118,19 @@ describe( "Taab filters", function () {
       } );
 
       it( "should do nothing", function () {
-        expect( currentLanguageFilter( posts, "en-gb" ) ).toEqual( posts );
+        expect( currentLanguageFilter( posts, "en-gb" ) ).to.eql( posts );
       } );
 
       it( "should do nothing", function () {
-        expect( currentLanguageFilter( posts, "fr-fr" ) ).toEqual( posts );
+        expect( currentLanguageFilter( posts, "fr-fr" ) ).to.equal( posts );
       } );
 
       it( "should do nothing", function () {
-        expect( currentLanguageFilter( posts, "es" ) ).toEqual( posts );
+        expect( currentLanguageFilter( posts, "es" ) ).to.equal( posts );
       } );
 
       it( "should do nothing", function () {
-        expect( currentLanguageFilter( posts, "ru" ) ).toEqual( posts );
+        expect( currentLanguageFilter( posts, "ru" ) ).to.equal( posts );
       } );
 
     } );
@@ -148,8 +148,8 @@ describe( "Taab filters", function () {
       } );
 
       it( "should filter the en lang", function () {
-        expect( currentLanguageFilter( posts, "en-gb" ).length ).toEqual( 2 );
-        expect( currentLanguageFilter( posts, "en-gb" ) ).toEqual( [
+        expect( currentLanguageFilter( posts, "en-gb" ).length ).to.equal( 2 );
+        expect( currentLanguageFilter( posts, "en-gb" ) ).to.eql( [
           {labels: [
             {name: "en"}
           ]},
@@ -160,8 +160,8 @@ describe( "Taab filters", function () {
       } );
 
       it( "should filter the fr lang", function () {
-        expect( currentLanguageFilter( posts, "fr-fr" ).length ).toEqual( 3 );
-        expect( currentLanguageFilter( posts, "fr-fr" ) ).toEqual( [
+        expect( currentLanguageFilter( posts, "fr-fr" ).length ).to.equal( 3 );
+        expect( currentLanguageFilter( posts, "fr-fr" ) ).to.eql( [
           {labels: [
             {name: "fr"}
           ]},
@@ -175,8 +175,8 @@ describe( "Taab filters", function () {
       } );
 
       it( "should filter the es lang", function () {
-        expect( currentLanguageFilter( posts, "es" ).length ).toEqual( 2 );
-        expect( currentLanguageFilter( posts, "es" ) ).toEqual( [
+        expect( currentLanguageFilter( posts, "es" ).length ).to.equal( 2 );
+        expect( currentLanguageFilter( posts, "es" ) ).to.eql( [
           {labels: [
             {name: "es"}
           ]},
@@ -187,8 +187,8 @@ describe( "Taab filters", function () {
       } );
 
       it( "should filter the ru lang", function () {
-        expect( currentLanguageFilter( posts, "ru" ).length ).toEqual( 0 );
-        expect( currentLanguageFilter( posts, "ru" ) ).toEqual( [] );
+        expect( currentLanguageFilter( posts, "ru" ).length ).to.equal( 0 );
+        expect( currentLanguageFilter( posts, "ru" ) ).to.eql( [] );
       } );
 
     } );
@@ -204,11 +204,11 @@ describe( "Taab filters", function () {
     } );
 
     it( "should use the I18n service", function () {
-      spyOn( I18n, "translate" );
+      sinon.spy( I18n, "translate" );
       var result = i18nFilter( "key" );
 
-      expect( I18n.translate ).toHaveBeenCalledWith( "key" );
-      expect( result ).toEqual( I18n.translate( "key" ) );
+      expect( I18n.translate.calledWith( "key" ) ).to.be.true;
+      expect( result ).to.equal( I18n.translate( "key" ) );
     } );
 
   } );
@@ -222,19 +222,19 @@ describe( "Taab filters", function () {
     } );
 
     it( "should return the language name of the code `fr`", function () {
-      expect( langFilter( "fr" ) ).toEqual( "Français" );
+      expect( langFilter( "fr" ) ).to.equal( "Français" );
     } );
 
     it( "should return the language name of the code `en`", function () {
-      expect( langFilter( "en" ) ).toEqual( "English" );
+      expect( langFilter( "en" ) ).to.equal( "English" );
     } );
 
     it( "should return the language name of the code `es`", function () {
-      expect( langFilter( "es" ) ).toEqual( "Español" );
+      expect( langFilter( "es" ) ).to.equal( "Español" );
     } );
 
     it( "should return undefined if name of the code is not defined", function () {
-      expect( langFilter( "ru" ) ).toBeUndefined();
+      expect( langFilter( "ru" ) ).to.not.be.defined;
     } );
 
   } );
@@ -254,7 +254,7 @@ describe( "Taab filters", function () {
     } );
 
     it( "should return the array of tags from the first `tags` checklists", function () {
-      expect( tagsFilter( checklists ) ).toEqual( ["css", "lorem ipsum"] );
+      expect( tagsFilter( checklists ) ).to.eql( ["css", "lorem ipsum"] );
     } );
 
   } );

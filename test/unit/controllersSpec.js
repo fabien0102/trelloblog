@@ -12,21 +12,21 @@ describe( "Taab controllers", function () {
 
     beforeEach( inject( function ( $rootScope, $controller ) {
       scope = $rootScope.$new();
-      spyOn( Trello, "load" );
+      Trello.load = sinon.spy();
 
       ctrl = $controller( "PostListCtrl", {$scope: scope, Trello: Trello} );
     } ) );
 
     it( "should defined the date format", function () {
-      expect( scope.dateFormat ).toEqual( "fullDate" );
+      expect( scope.dateFormat ).to.equal( "fullDate" );
     } );
 
     it( "should assign the model to the scope", function () {
-      expect( scope.trello ).toEqual( model );
+      expect( scope.trello ).to.equal( model );
     } );
 
     it( "should load the data from the service", function () {
-      expect( Trello.load ).toHaveBeenCalled()
+      expect( Trello.load.called ).to.be.true;
     } );
   } );
 
@@ -39,7 +39,7 @@ describe( "Taab controllers", function () {
     } ) );
 
     it( "should assign the model to the scope", function () {
-      expect( scope.trello ).toEqual( model );
+      expect( scope.trello ).to.equal( model );
     } );
   } );
 } );

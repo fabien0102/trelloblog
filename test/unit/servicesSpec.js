@@ -11,7 +11,8 @@ describe( "Taab services", function () {
       // load our module and also provide some mock
       module( "trelloBlogApp", function ( $provide ) {
 
-        tmhDynamicLocale = jasmine.createSpyObj( "tmhDynamicLocale", ["set"] );
+        //tmhDynamicLocale = jasmine.createSpyObj( "tmhDynamicLocale", ["set"] );
+        tmhDynamicLocale = {set: sinon.spy()};
 
         $provide.value( "tmhDynamicLocale", tmhDynamicLocale );
         $provide.constant( "config", { language: "en"} );
@@ -30,53 +31,53 @@ describe( "Taab services", function () {
     } );
 
     it( "should initialize the locale to the browser default", function () {
-      expect( $rootScope.locale ).toEqual( navigator.language.toLocaleLowerCase() );
+      expect( $rootScope.locale ).to.equal( navigator.language.toLocaleLowerCase() );
     } );
 
     it( "should propagate change of locale", function () {
       $rootScope.locale = "en-gb";
       $rootScope.$apply(); // Apply the change
 
-      expect( $rootScope.locale ).toEqual( "en-gb" );
-      expect( $rootScope.shortLocale ).toEqual( "en" );
-      expect( tmhDynamicLocale.set ).toHaveBeenCalledWith( "en-gb" );
+      expect( $rootScope.locale ).to.equal( "en-gb" );
+      expect( $rootScope.shortLocale ).to.equal( "en" );
+      expect( tmhDynamicLocale.set.calledWith( "en-gb" ) ).to.be.true;
 
       $rootScope.locale = "fr-fr";
       $rootScope.$apply(); // Apply the change
 
-      expect( $rootScope.locale ).toEqual( "fr-fr" );
-      expect( $rootScope.shortLocale ).toEqual( "fr" );
-      expect( tmhDynamicLocale.set ).toHaveBeenCalledWith( "fr-fr" );
+      expect( $rootScope.locale ).to.equal( "fr-fr" );
+      expect( $rootScope.shortLocale ).to.equal( "fr" );
+      expect( tmhDynamicLocale.set.calledWith( "fr-fr" ) ).to.be.true;
     } );
 
     it( "should store locale in lower case", function () {
       $rootScope.locale = "en-gb";
       $rootScope.$apply(); // Apply the change
 
-      expect( $rootScope.locale ).toEqual( "en-gb" );
-      expect( $rootScope.shortLocale ).toEqual( "en" );
-      expect( tmhDynamicLocale.set ).toHaveBeenCalledWith( "en-gb" );
+      expect( $rootScope.locale ).to.equal( "en-gb" );
+      expect( $rootScope.shortLocale ).to.equal( "en" );
+      expect( tmhDynamicLocale.set.calledWith( "en-gb" ) ).to.be.true;
     } );
 
     it( "should use the lang+region translation", function () {
       $rootScope.locale = "fr-fr";
       $rootScope.$apply(); // Apply the change
 
-      expect( I18n.translate( "foo" ) ).toEqual( "fr-fr" );
+      expect( I18n.translate( "foo" ) ).to.equal( "fr-fr" );
     } );
 
     it( "should use the lang translation if no region", function () {
       $rootScope.locale = "en-gb";
       $rootScope.$apply(); // Apply the change
 
-      expect( I18n.translate( "foo" ) ).toEqual( "en" );
+      expect( I18n.translate( "foo" ) ).to.equal( "en" );
     } );
 
     it( "should use the default lang if no translation", function () {
       $rootScope.locale = "ru";
       $rootScope.$apply(); // Apply the change
 
-      expect( I18n.translate( "foo" ) ).toEqual( "en" );
+      expect( I18n.translate( "foo" ) ).to.equal( "en" );
     } );
   } );
 
@@ -105,17 +106,17 @@ describe( "Taab services", function () {
     } );
 
     it( "should defined the correct interface", function () {
-      expect( service.load ).toBeDefined();
-      expect( service.blog ).toBeDefined();
+      expect( service.load ).to.be.defined;
+      expect( service.blog ).to.be.defined;
     } );
 
     it( "should correctly initialized the blog", function () {
       var blog = service.blog();
 
-      expect( blog.error ).toBeNull();
+      expect( blog.error ).to.be.null;
 
       // It should not defined other properties
-      expect( Object.keys( blog ).length ).toBe( 1 );
+      expect( Object.keys( blog ).length ).to.equal( 1 );
     } );
 
     it( "should report if there is an error", function () {
@@ -125,7 +126,7 @@ describe( "Taab services", function () {
       $httpBackend.flush();
 
       var blog = service.blog();
-      expect( blog.error ).toBeDefined();
+      expect( blog.error ).to.not.be.undefined;
     } );
 
     describe( "while offline", function () {
@@ -141,12 +142,12 @@ describe( "Taab services", function () {
         $httpBackend.flush();
 
         var blog = service.blog();
-        expect( blog.name ).toEqual( response.name );
-        expect( blog.desc ).toEqual( response.desc );
-        expect( blog.lists ).toEqual( response.lists );
-        expect( blog.members ).toEqual( response.members );
-        expect( blog.labels ).toEqual( response.labelNames );
-        expect( blog.cards ).toEqual( response.cards );
+        expect( blog.name ).to.eql( response.name );
+        expect( blog.desc ).to.eql( response.desc );
+        expect( blog.lists ).to.eql( response.lists );
+        expect( blog.members ).to.eql( response.members );
+        expect( blog.labels ).to.eql( response.labelNames );
+        expect( blog.cards ).to.eql( response.cards );
       } );
 
     } );
@@ -159,12 +160,12 @@ describe( "Taab services", function () {
         $httpBackend.flush();
 
         var blog = service.blog();
-        expect( blog.name ).toEqual( response.name );
-        expect( blog.desc ).toEqual( response.desc );
-        expect( blog.lists ).toEqual( response.lists );
-        expect( blog.members ).toEqual( response.members );
-        expect( blog.labels ).toEqual( response.labelNames );
-        expect( blog.cards ).toEqual( response.cards );
+        expect( blog.name ).to.eql( response.name );
+        expect( blog.desc ).to.eql( response.desc );
+        expect( blog.lists ).to.eql( response.lists );
+        expect( blog.members ).to.eql( response.members );
+        expect( blog.labels ).to.eql( response.labelNames );
+        expect( blog.cards ).to.eql( response.cards );
       } );
 
       it( "should sort the cards by due date", function () {
@@ -180,9 +181,9 @@ describe( "Taab services", function () {
         $httpBackend.flush();
 
         var blog = service.blog();
-        expect( blog.cards[0].due ).toEqual( "2014-04-06T15:00:00.000Z" );
-        expect( blog.cards[1].due ).toEqual( "2014-04-06T12:00:00.000Z" );
-        expect( blog.cards[2].due ).toEqual( "2014-03-06T12:00:00.000Z" );
+        expect( blog.cards[0].due ).to.equal( "2014-04-06T15:00:00.000Z" );
+        expect( blog.cards[1].due ).to.equal( "2014-04-06T12:00:00.000Z" );
+        expect( blog.cards[2].due ).to.equal( "2014-03-06T12:00:00.000Z" );
       } );
 
       it( "should add member information in each cards", function () {
@@ -205,10 +206,10 @@ describe( "Taab services", function () {
         $httpBackend.flush();
 
         var blog = service.blog();
-        expect( blog.cards[0].members[0].username ).toEqual( "nicolascarlo" );
-        expect( blog.cards[0].members[1].username ).toEqual( "fmonniot" );
-        expect( blog.cards[1].members[0].username ).toEqual( "nicolascarlo" );
-        expect( blog.cards[2].members[0].username ).toEqual( "fmonniot" );
+        expect( blog.cards[0].members[0].username ).to.equal( "nicolascarlo" );
+        expect( blog.cards[0].members[1].username ).to.equal( "fmonniot" );
+        expect( blog.cards[1].members[0].username ).to.equal( "nicolascarlo" );
+        expect( blog.cards[2].members[0].username ).to.equal( "fmonniot" );
       } );
     } );
 

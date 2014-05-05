@@ -9,7 +9,7 @@ module.exports = function ( config ) {
 
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-    frameworks: ['jasmine'],
+    frameworks: ['mocha', 'chai', 'sinon'],
 
     // list of files / patterns to load in the browser
     files: [
@@ -25,6 +25,7 @@ module.exports = function ( config ) {
       "bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js",
       "bower_components/angular-animate/angular-animate.min.js",
       "bower_components/angular-mocks/angular-mocks.js",
+
       'js/**/*.js',
       'test/unit/**/*.js'
     ],
