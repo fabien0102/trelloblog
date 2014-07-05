@@ -136,8 +136,8 @@
         href="https://github.com/fabien0102/trelloblog">the project repo</a>.
 
       <h3>{{ 'archives' | i18n }}</h3>
-      <div data-ng-repeat="period in trello.periods">
-        <a href="#" data-ng-click="$root.period=period;">{{period | date: 'MMMM yyyy'}}</a>
+      <div data-ng-repeat="period in trello.cards | notPastDue | published | currentLanguage:locale | filter:search | category | uniquePeriods">
+        <a href="#" data-ng-click="$root.period=period.due;">{{period.due | date: 'MMMM yyyy'}}</a>
       </div>
     </aside>
   </div>

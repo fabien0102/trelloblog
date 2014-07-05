@@ -112,4 +112,17 @@ angular.module( "trelloBlogFilters", [] )
         return new Date( post.due ).getMonth() + "-" + new Date( post.due ).getFullYear() === period;
       } );
     };
+  }] )
+
+  .filter( "uniquePeriods", [function () {
+    return function ( posts ) {
+      var period, oldPeriod, flag;
+      return _.filter(posts, function(post){
+        flag = false;
+        period = new Date( post.due ).getMonth() + "-" + new Date( post.due ).getFullYear();
+        if ( period !== oldPeriod) flag = true;
+        oldPeriod = period;
+        return flag;
+      })
+    };
   }] );
