@@ -12,4 +12,7 @@ angular.module( "trelloBlogControllers", [] )
   ] )
   .controller( "AsideCtrl", ["$scope", "Trello", function ( $scope, Trello ) {
     $scope.trello = Trello.blog();
+  }] )
+  .controller( "NavigationCtrl", ["$scope", "Trello", function ( $scope, Trello ) {
+    $scope.trello = Trello.blog();
   }] );
