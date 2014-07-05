@@ -71,6 +71,7 @@ angular.module( "trelloBlogServices", [] )
           // Consolidate Trello data
           _.forEach( model.lists, function ( list ) {
             list.tags = [];
+            list.labels = {};
             _.forEach( model.cards, function ( card ) {
 
               // Add members information into cards model
@@ -79,17 +80,25 @@ angular.module( "trelloBlogServices", [] )
                 card.members.push( _.findWhere( model.members, {id: member} ) );
               } );
 
-              // Add tags checklist information into lists model
+              // Meld card and list information
               if ( card.idList === list.id ) {
+                // Add listName into each card
                 card.listName = list.name;
+
+                // Add tags checklist information into lists model
                 _.forEach( card.checklists, function ( checklist ) {
                   if ( checklist.name.toLowerCase() === "tags" ) {
                     list.tags = _.union( _.flatten( checklist.checkItems, "name" ), list.tags )
                   }
                 } );
+
+                // Add langs available in the list
+                list.labels = _.union( list.labels, card.labels );
               }
             } );
             list.tags = _.sortBy(list.tags);
+            list.labels = _.uniq(list.labels, "name");
+            console.log(list.name, list.labels);
           } );
 
           $rootScope.offline = false;
