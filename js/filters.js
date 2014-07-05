@@ -58,9 +58,7 @@ angular.module( "trelloBlogFilters", [] )
 
   .filter( "category", ["$rootScope", function ( $rootScope ) {
     return function ( posts ) {
-      if ( $rootScope.category ) {
-        return _.filter( posts, {idList: $rootScope.category} );
-      } else if ( $rootScope.subcategory ) {
+      if ( $rootScope.subcategory ) {
         return _.filter( posts, function ( post ) {
           var inThisSubCategory = false;
           _.forEach( post.checklists, function ( checklist ) {
@@ -70,6 +68,8 @@ angular.module( "trelloBlogFilters", [] )
           } );
           return inThisSubCategory;
         } );
+      } else if ( $rootScope.category ) {
+        return _.filter( posts, {idList: $rootScope.category} );
       } else {
         return posts;
       }
