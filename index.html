@@ -56,10 +56,10 @@
               <a href="#" 
                  data-ng-class="category.tags.length ? 'dropdown-toggle' : ''"
                  data-toggle="dropdown"
-                 data-ng-click="$root.subcategory=null; $root.category=category.id">{{category.name}}</a>
+                 data-ng-click="$root.subcategory=null; $root.category=category.id; $root.period=null">{{category.name}}</a>
               <ul class="dropdown-menu" data-ng-show="(category.tags| currentLanguage:locale).length">
                 <li>
-                  <a href="#" data-ng-click="$root.subcategory=subCategory.name; $root.category=category.id"
+                  <a href="#" data-ng-click="$root.subcategory=subCategory.name; $root.category=category.id; $root.period=null"
                     data-ng-repeat="subCategory in category.tags| currentLanguage:locale">
                     <span data-ng-show="$root.subcategory === subCategory.name" class="glyphicon glyphicon-asterisk"></span>
                     {{subCategory.name}}
