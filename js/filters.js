@@ -71,7 +71,9 @@ angular.module( "trelloBlogFilters", [] )
       } else if ( $rootScope.category ) {
         return _.filter( posts, {idList: $rootScope.category} );
       } else {
-        return posts;
+        return _.filter( posts, function( post ) {
+          return post.listName;
+        } );
       }
     }
   }] )

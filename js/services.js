@@ -81,6 +81,7 @@ angular.module( "trelloBlogServices", [] )
 
               // Add tags checklist information into lists model
               if ( card.idList === list.id ) {
+                card.listName = list.name;
                 _.forEach( card.checklists, function ( checklist ) {
                   if ( checklist.name.toLowerCase() === "tags" ) {
                     list.tags = _.union( _.flatten( checklist.checkItems, "name" ), list.tags )
