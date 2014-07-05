@@ -6,10 +6,10 @@ angular.module( "trelloBlogLocales", [] )
   .constant( "LOCALES", {
     "en": {
       "postedOn": "posted on",
-      "categories": "Categories"
+      "archives": "Archives"
     },
     "fr": {
       "postedOn": "posté le",
-      "categories": "Catégories"
+      "archives": "Archives"
     }
   } );

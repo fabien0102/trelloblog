@@ -131,17 +131,10 @@
       board. Please have a look at <a
         href="https://github.com/fabien0102/trelloblog">the project repo</a>.
 
-      <h2>{{ 'categories' | i18n }}</h2>
-      <ul>
-        <li data-ng-repeat="category in trello.lists"><a href="#"
-                                                         data-ng-click="$root.subcategory=null; $root.category=category.id">{{category.name}}</a>
-          <ul>
-            <li data-ng-click="$root.subcategory=subCategory; $root.category=null"
-                data-ng-repeat="subCategory in category.tags">{{subCategory}}
-            </li>
-          </ul>
-        </li>
-      </ul>
+      <h3>{{ 'archives' | i18n }}</h3>
+      <div data-ng-repeat="date in trello.archives">
+        <a href="#" data-ng-click="$root.archives=null;">{{date | date: 'MMMM yyyy'}}</a>
+      </div>
     </aside>
   </div>
 </main>
