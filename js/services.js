@@ -88,7 +88,11 @@ angular.module( "trelloBlogServices", [] )
                 // Add tags checklist information into lists model
                 _.forEach( card.checklists, function ( checklist ) {
                   if ( checklist.name.toLowerCase() === "tags" ) {
-                    list.tags = _.union( _.flatten( checklist.checkItems, "name" ), list.tags )
+                    _.forEach( checklist.checkItems, function ( tag ) {
+                      var listTag = _.find( list.tags, { name: tag.name } );
+                      if ( listTag ) listTag.labels = _.union( listTag.labels, card.labels );
+                      else list.tags.push( _.extend( tag, { labels: card.labels } ) );
+                    } );
                   }
                 } );
 
@@ -96,10 +100,25 @@ angular.module( "trelloBlogServices", [] )
                 list.labels = _.union( list.labels, card.labels );
               }
             } );
-            list.tags = _.sortBy(list.tags);
-            list.labels = _.uniq(list.labels, "name");
-            console.log(list.name, list.labels);
+            // Delete duplicate
+            list.tags = _.uniq( list.tags, "name" );
+
+            // Sort tags by name (ascending)
+            list.tags = list.tags.sort( function ( a, b ) {
+              var nameA = a.name.toLowerCase(), nameB = b.name.toLowerCase();
+              if (nameA < nameB) return -1; //sort string ascending
+              if (nameA > nameB) return 1;
+              return 0; //default return value (no sorting)
+              } );
+            list.labels = _.uniq( list.labels, "name" );
+
+            // Delete duplicate list.tags.labels
+            _.forEach( list.tags, function ( tag ) {
+              tag.labels = _.uniq(tag.labels, "name");
+            } );
+
           } );
+          
 
           $rootScope.offline = false;
 

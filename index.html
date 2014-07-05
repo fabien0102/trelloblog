@@ -57,12 +57,12 @@
                  data-ng-class="category.tags.length ? 'dropdown-toggle' : ''"
                  data-toggle="dropdown"
                  data-ng-click="$root.subcategory=null; $root.category=category.id">{{category.name}}</a>
-              <ul class="dropdown-menu" data-ng-show="category.tags.length">
+              <ul class="dropdown-menu" data-ng-show="(category.tags| currentLanguage:locale).length">
                 <li>
-                  <a href="#" data-ng-click="$root.subcategory=subCategory; $root.category=category.id"
-                    data-ng-repeat="subCategory in category.tags">
-                    <span data-ng-show="$root.subcategory === subCategory" class="glyphicon glyphicon-asterisk"></span>
-                    {{subCategory}}
+                  <a href="#" data-ng-click="$root.subcategory=subCategory.name; $root.category=category.id"
+                    data-ng-repeat="subCategory in category.tags| currentLanguage:locale">
+                    <span data-ng-show="$root.subcategory === subCategory.name" class="glyphicon glyphicon-asterisk"></span>
+                    {{subCategory.name}}
                   </a>
                 </li>
               </ul>
