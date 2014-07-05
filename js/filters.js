@@ -102,4 +102,14 @@ angular.module( "trelloBlogFilters", [] )
       } )[0] || {checkItems: []};
       return tagChecklist.checkItems;
     };
+  }] )
+
+  .filter( "period", ["$rootScope", function ( $rootScope ) {
+    return function ( posts ) {
+      if ( !$rootScope.period ) return posts;
+      var period = new Date( $rootScope.period ).getMonth() + "-" + new Date( $rootScope.period ).getFullYear();
+      return _.filter( posts, function( post ){
+        return new Date( post.due ).getMonth() + "-" + new Date( post.due ).getFullYear() === period;
+      } );
+    };
   }] );

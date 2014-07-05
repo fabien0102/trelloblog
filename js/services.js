@@ -91,13 +91,13 @@ angular.module( "trelloBlogServices", [] )
             list.tags = _.sortBy(list.tags);
           } );
 
-          // Extract month-year list for archives
-          model.archives = [];
-          var date, oldDate;
+          // Extract periods (month) list for archives
+          model.periods = [];
+          var period, oldPeriod;
           _.forEach( model.cards, function( post ) {
-            date = new Date( post.due ).getMonth() + "-" + new Date( post.due ).getFullYear();
-            if ( date !== oldDate) model.archives.push( post.due );
-            oldDate = date;
+            period = new Date( post.due ).getMonth() + "-" + new Date( post.due ).getFullYear();
+            if ( period !== oldPeriod) model.periods.push( post.due );
+            oldPeriod = period;
           } );
 
           $rootScope.offline = false;
