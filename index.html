@@ -50,22 +50,15 @@
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Lorem</a></li>
-            <li><a href="#">Ipsum</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle"
-                 data-toggle="dropdown">Categories <b class="caret"></b></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">CSS and cie</a></li>
-                <li><a href="#">Git Management</a></li>
-                <li><a href="#">YOLO</a></li>
-                <li class="divider"></li>
-                <li><a href="#">Flowers and unicorns</a></li>
-                <li class="divider"></li>
-                <li>
-                  <a href="https://www.youtube.com/watch?v=GaoLU6zKaws"
-                     target="_blank">Do not click</a>
+          <ul class="nav navbar-nav" data-ng-controller="NavigationCtrl">
+            <li data-ng-repeat="category in trello.lists" data-ng-class="category.tags.length ? 'dropdown' : ''">
+              <a href="#" 
+                 data-ng-class="category.tags.length ? 'dropdown-toggle' : ''"
+                 data-toggle="dropdown"
+                 data-ng-click="$root.subcategory=null; $root.category=category.id">{{category.name}}</a>
+              <ul class="dropdown-menu" data-ng-show="category.tags.length">
+                <li><a href="#" data-ng-click="$root.subcategory=subCategory; $root.category=null"
+                    data-ng-repeat="subCategory in category.tags">{{subCategory}}</a>
                 </li>
               </ul>
             </li>
