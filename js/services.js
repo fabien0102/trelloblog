@@ -63,6 +63,7 @@ angular.module( "trelloBlogServices", [] )
             return !/^\[.*\]$/.exec( list.name );
           } );
 
+          // Sort by publication date
           model.cards = _.sortBy( res.data.cards, function ( post ) {
             return new Date( post.due ).getTime();
           } ).reverse();
@@ -88,6 +89,15 @@ angular.module( "trelloBlogServices", [] )
               }
             } );
             list.tags = _.sortBy(list.tags);
+          } );
+
+          // Extract month-year list for archives
+          model.archives = [];
+          var date, oldDate;
+          _.forEach( model.cards, function( post ) {
+            date = new Date( post.due ).getMonth() + "-" + new Date( post.due ).getFullYear();
+            if ( date !== oldDate) model.archives.push( post.due );
+            oldDate = date;
           } );
 
           $rootScope.offline = false;
