@@ -5,9 +5,11 @@
 angular.module( "trelloBlogLocales", [] )
   .constant( "LOCALES", {
     "en": {
-      "postedOn": "posted on"
+      "postedOn": "posted on",
+      "categories": "Categories"
     },
     "fr": {
-      "postedOn": "posté le"
+      "postedOn": "posté le",
+      "categories": "Catégories"
     }
   } );

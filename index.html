@@ -134,7 +134,7 @@
       board. Please have a look at <a
         href="https://github.com/fabien0102/trelloblog">the project repo</a>.
 
-      <h2>Categories</h2>
+      <h2>{{ 'categories' | i18n }}</h2>
       <ul>
         <li data-ng-repeat="category in trello.lists"><a href="#"
                                                          data-ng-click="$root.subcategory=null; $root.category=category.id">{{category.name}}</a>
