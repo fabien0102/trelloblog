@@ -28,7 +28,7 @@ Prompt.get( [
   {
     name: "trelloBoardId",
     description: "Trello board id",
-    default: "c94SaRKm"
+    default: "RCwudeYO"
   },
   {
     name: "unpublishedLabel",
