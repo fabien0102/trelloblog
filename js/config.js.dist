@@ -11,6 +11,7 @@ angular.module( "trelloBlogConfig", [] )
       "apiKey": "$API_KEY$", // Generated at https://trello.com/1/appKey/generate
       "unpublishedLabel": "$UNPUBLISHED_LABEL$"
     },
+    "configurationList": "$CONFIGURATION_LIST$",
     "animations": {
       "slide-in": {
         "duration": 1,
