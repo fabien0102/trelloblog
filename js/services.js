@@ -57,11 +57,14 @@ angular.module( "trelloBlogServices", [] )
           model.desc = res.data.desc;
           model.members = res.data.members;
           model.labels = res.data.labelNames;
+          model.config = {};
 
           // Filter `[name]` pattern
           model.lists = _.filter( res.data.lists, function ( list ) {
             return !/^\[.*\]$/.exec( list.name );
           } );
+          var configList = _.findWhere( res.data.lists, { name: config.configurationList });
+
 
           // Sort by publication date
           model.cards = _.sortBy( res.data.cards, function ( post ) {
@@ -73,6 +76,15 @@ angular.module( "trelloBlogServices", [] )
             list.tags = [];
             list.labels = {};
             _.forEach( model.cards, function ( card ) {
+              if ( card.idList === configList.id ) {
+                if (!_.isEmpty(card.labels)) {
+                  if (!model.config[card.name]) model.config[card.name] = {};
+                  model.config[card.name][card.labels[0].name] = card.desc;
+                } else {
+                  model.config[card.name] = card.desc;
+                }
+                return; // Next card
+              }
 
               // Add members information into cards model
               card.members = [];
