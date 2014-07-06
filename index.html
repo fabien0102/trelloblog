@@ -56,13 +56,13 @@
               <a href="#" 
                  data-ng-class="category.tags.length ? 'dropdown-toggle' : ''"
                  data-toggle="dropdown"
-                 data-ng-click="$root.subcategory=null; $root.category=category.id; $root.period=null">{{category.name}}</a>
+                 data-ng-click="$root.subcategory=null; $root.category=category.id; $root.period=null">{{ category.name }}</a>
               <ul class="dropdown-menu" data-ng-show="(category.tags| currentLanguage:locale).length">
                 <li>
                   <a href="#" data-ng-click="$root.subcategory=subCategory.name; $root.category=category.id; $root.period=null"
                     data-ng-repeat="subCategory in category.tags| currentLanguage:locale">
                     <span data-ng-show="$root.subcategory === subCategory.name" class="glyphicon glyphicon-asterisk"></span>
-                    {{subCategory.name}}
+                    {{ subCategory.name }}
                   </a>
                 </li>
               </ul>
@@ -93,7 +93,7 @@
           <!-- Post meta information -->
           <div class="row">
             <div class="col-sm-10">
-              <h3 class="post-title">{{post.name}}</h3>
+              <h3 class="post-title">{{ post.name }}</h3>
               <span class="post-time" data-ng-show="post.due"> {{ 'postedOn' | i18n }}
                 <time datetime="{{ post.due }}" pubdate="">
                   {{ post.due | date: dateFormat }}
@@ -112,7 +112,7 @@
                 <img class="post-author img-circle pop-in"
                      data-ng-src="https://trello-avatars.s3.amazonaws.com/{{ member.avatarHash }}/50.png"
                      data-tooltip-placement="right"
-                     data-tooltip="{{member.fullName}}"/>
+                     data-tooltip="{{ member.fullName }}"/>
               </span>
             </span><!-- /.post-authors -->
           </div>
@@ -128,7 +128,7 @@
             data-ng-show="label | lang"
             data-ng-class="{ active: ( shortLocale === label ) }"
             >
-          <a href="#" class="{{label}}" data-ng-click="$root.locale=label">{{ label | lang }}</a>
+          <a href="#" class="{{ label }}" data-ng-click="$root.locale=label">{{ label | lang }}</a>
         </li>
       </ul>
       Here is a POC of a blog where posts are managed directly from a Trello
