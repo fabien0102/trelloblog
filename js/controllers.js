@@ -16,4 +16,7 @@ angular.module( "trelloBlogControllers", [] )
   }] )
   .controller( "NavigationCtrl", ["$scope", "Trello", function ( $scope, Trello ) {
     $scope.trello = Trello.blog();
+  }] )
+  .controller( "HeadCtrl", ["$scope", "Trello", function ( $scope, Trello ) {
+    $scope.trello = Trello.blog();
   }] );
