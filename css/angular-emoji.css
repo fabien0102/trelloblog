@@ -1,0 +1,1968 @@
+.emoji--+1 {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/+1.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji---1 {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/-1.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--100 {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/100.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--109 {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/109.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--1234 {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/1234.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--8ball {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/8ball.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--a {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/a.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--ab {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/ab.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--abc {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/abc.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--abcd {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/abcd.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--alien {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/alien.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--angel {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/angel.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--anger {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/anger.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--angry {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/angry.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--ant {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/ant.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--apple {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/apple.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--aries {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/aries.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--art {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/art.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--atm {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/atm.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--b {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/b.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--baby {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/baby.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--bank {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/bank.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--bath {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/bath.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--bear {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/bear.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--bee {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/bee.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--beer {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/beer.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--beers {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/beers.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--bell {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/bell.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--bento {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/bento.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--bike {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/bike.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--bird {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/bird.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--blush {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/blush.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--boar {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/boar.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--boat {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/boat.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--bomb {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/bomb.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--book {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/book.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--books {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/books.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--boom {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/boom.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--boot {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/boot.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--bow {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/bow.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--boy {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/boy.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--bread {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/bread.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--bug {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/bug.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--bulb {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/bulb.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--bus {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/bus.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--cake {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/cake.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--camel {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/camel.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--candy {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/candy.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--car {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/car.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--cat {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/cat.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--cat2 {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/cat2.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--cd {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/cd.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--chart {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/chart.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--cl {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/cl.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--clap {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/clap.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--cloud {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/cloud.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--clubs {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/clubs.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--cn {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/cn.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--cool {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/cool.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--cop {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/cop.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--corn {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/corn.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--cow {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/cow.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--cow2 {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/cow2.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--crown {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/crown.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--cry {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/cry.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--cupid {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/cupid.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--curry {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/curry.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--dango {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/dango.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--dart {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/dart.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--dash {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/dash.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--date {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/date.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--de {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/de.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--dizzy {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/dizzy.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--dog {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/dog.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--dog2 {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/dog2.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--dolls {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/dolls.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--donut {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/donut.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--door {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/door.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--dress {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/dress.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--dvd {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/dvd.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--ear {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/ear.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--egg {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/egg.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--eight {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/eight.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--email {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/email.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--end {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/end.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--es {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/es.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--euro {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/euro.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--eyes {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/eyes.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--fax {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/fax.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--feet {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/feet.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--fire {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/fire.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--fish {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/fish.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--fist {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/fist.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--five {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/five.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--flags {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/flags.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--foggy {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/foggy.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--four {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/four.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--fr {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/fr.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--free {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/free.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--fries {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/fries.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--frog {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/frog.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--fu {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/fu.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--gb {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/gb.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--gem {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/gem.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--ghost {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/ghost.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--gift {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/gift.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--girl {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/girl.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--goat {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/goat.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--golf {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/golf.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--grin {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/grin.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--gun {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/gun.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--hand {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/hand.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--hash {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/hash.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--heart {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/heart.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--herb {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/herb.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--hocho {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/hocho.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--horse {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/horse.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--hotel {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/hotel.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--house {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/house.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--id {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/id.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--imp {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/imp.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--it {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/it.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--japan {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/japan.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--jeans {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/jeans.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--joy {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/joy.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--jp {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/jp.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--key {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/key.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--kiss {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/kiss.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--koala {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/koala.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--koko {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/koko.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--kr {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/kr.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--lemon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/lemon.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--leo {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/leo.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--libra {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/libra.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--link {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/link.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--lips {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/lips.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--lock {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/lock.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--loop {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/loop.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--m {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/m.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--mag {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/mag.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--man {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/man.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--mask {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/mask.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--mega {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/mega.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--melon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/melon.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--memo {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/memo.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--mens {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/mens.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--metal {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/metal.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--metro {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/metro.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--moon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/moon.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--mouse {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/mouse.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--moyai {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/moyai.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--mute {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/mute.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--new {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/new.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--ng {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/ng.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--nine {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/nine.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--nose {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/nose.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--notes {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/notes.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--o {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/o.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--o2 {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/o2.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--ocean {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/ocean.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--oden {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/oden.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--ok {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/ok.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--on {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/on.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--one {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/one.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--ox {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/ox.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--pager {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/pager.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--peach {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/peach.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--pear {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/pear.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--phone {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/phone.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--pig {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/pig.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--pig2 {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/pig2.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--pill {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/pill.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--pizza {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/pizza.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--plus1 {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/plus1.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--poop {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/poop.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--pouch {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/pouch.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--pound {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/pound.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--pray {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/pray.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--punch {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/punch.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--purse {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/purse.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--radio {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/radio.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--rage {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/rage.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--rage1 {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/rage1.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--rage2 {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/rage2.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--rage3 {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/rage3.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--rage4 {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/rage4.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--ram {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/ram.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--ramen {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/ramen.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--rat {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/rat.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--rice {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/rice.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--ring {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/ring.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--rose {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/rose.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--ru {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/ru.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--sa {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/sa.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--sake {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/sake.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--santa {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/santa.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--seat {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/seat.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--seven {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/seven.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--sheep {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/sheep.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--shell {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/shell.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--ship {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/ship.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--shirt {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/shirt.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--shit {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/shit.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--shoe {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/shoe.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--six {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/six.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--ski {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/ski.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--skull {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/skull.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--smile {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/smile.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--smirk {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/smirk.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--snail {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/snail.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--snake {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/snake.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--sob {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/sob.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--soon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/soon.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--sos {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/sos.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--sound {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/sound.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--star {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/star.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--star2 {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/star2.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--stars {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/stars.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--stew {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/stew.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--sunny {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/sunny.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--sushi {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/sushi.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--tada {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/tada.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--taxi {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/taxi.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--tea {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/tea.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--tent {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/tent.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--tm {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/tm.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--top {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/top.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--tram {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/tram.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--tv {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/tv.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--two {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/two.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--uk {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/uk.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--up {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/up.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--us {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/us.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--v {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/v.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--vhs {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/vhs.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--vs {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/vs.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--wave {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/wave.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--wc {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/wc.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--wink {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/wink.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--wolf {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/wolf.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--x {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/x.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--yen {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/yen.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--yum {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/yum.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--zap {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/zap.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--zero {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/zero.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}
+.emoji--zzz {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/zzz.png");
+    background-size: 24px 24px;
+    color: rgba(0, 0, 0, 0);
+}

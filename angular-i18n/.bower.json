@@ -1,0 +1,19 @@
+{
+  "name": "angular-i18n",
+  "version": "1.2.17-build.100+sha.feb54d6",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components"
+  ],
+  "homepage": "https://github.com/angular/bower-angular-i18n",
+  "_release": "1.2.17-build.100+sha.feb54d6",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.2.17-build.100+sha.feb54d6",
+    "commit": "687dde3b4618032dac1e2763318d733bf6966936"
+  },
+  "_source": "git://github.com/angular/bower-angular-i18n.git",
+  "_target": "~1.2.16",
+  "_originalSource": "angular-i18n"
+}

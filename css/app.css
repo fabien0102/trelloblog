@@ -1,0 +1,191 @@
+/**
+ * RESET
+ */
+body {
+  background-color : #F0F0F0;
+  color            : #393939;
+  font             : 16px/21px ff-meta-serif-web-pro, Georgia, "Times New Roman", serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  clear       : both;
+  font-weight : bold;
+  font-family : ff-meta-web-pro, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/**
+ * OVERRIDE BOOTSTRAP
+ */
+.navbar {
+  border-radius : 0;
+}
+
+.navbar-default {
+  padding          : 8px 0;
+  border-color     : #2A79A6;
+  background-color : #2A79A6;
+  color            : white;
+  font-weight      : bold;
+  font-size        : 14px;
+  font-family      : "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height      : 20px;
+}
+
+.navbar-default .navbar-nav > li > a,
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus,
+.navbar-default .navbar-brand,
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  color : #FFF;
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  background-color : transparent;
+  color            : #CCC;
+}
+
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+  background-color : transparent;
+  color            : #CCC;
+}
+
+.navbar-brand {
+  display : inline-block;
+  float   : none;
+  padding : 5px 15px;
+}
+
+ul.nav li.dropdown:hover > ul.dropdown-menu {
+  display: block;
+}
+
+/**
+ * OUR OWN STYLE
+ */
+.posts {
+  list-style-type : none;
+}
+
+.post {
+  position         : relative;
+  margin           : 1.625em 0;
+  padding          : 20px;
+  border-radius    : 3px;
+  background-color : #FFF;
+}
+
+.post-title {
+  clear         : both;
+  margin-top    : 0;
+  margin-bottom : 5px;
+  font-weight   : bold;
+  font-size     : 30px;
+  line-height   : 1.1em;
+}
+
+.post-content {
+  margin-top : 26px;
+}
+
+.post-content img {
+  max-width : 100%;
+}
+
+.post-authors {
+  text-align : center;
+}
+
+.post-time {
+  color      : #999;
+  font-style : italic;
+}
+
+.post-time time {
+  color      : #393939;
+  font-style : normal;
+}
+
+.post-tags {
+  display         : inline-block;
+  list-style-type : none;
+}
+
+.post-tags li {
+  display       : inline-block;
+  margin-right  : 0.8em;
+  border        : 1px #2A79A6 solid;
+  border-radius : 3px;
+  font-size     : 0.8em;
+  padding       : 0.2em 0.5em;
+}
+
+.post-tags li:hover {
+  border : 1px #393939 solid;
+}
+
+.post-tags a {
+  color   : #2A79A6;
+  display : block;
+  height  : 100%;
+  width   : 100%;
+}
+
+.post-tags a:hover,
+.post-tags a:focus,
+.post-tags a:active {
+  text-decoration : none;
+  color           : #393939;
+}
+
+.sidebar-pitch {
+  margin-top : 1.625em;
+  color      : #999;
+}
+
+.sidebar-pitch a {
+  color           : #393939;
+  text-decoration : underline;
+}
+
+.pop-in {
+  -webkit-transform : scale(0);
+  -moz-transform    : scale(0);
+  transform         : scale(0);
+}
+
+.sidebar-pitch .nav {
+  margin-bottom : 0.5em;
+}
+
+.sidebar-pitch .nav li {
+  float        : right;
+  margin-right : 0.5em;
+}
+
+.sidebar-pitch .nav a {
+  text-decoration : none;
+  background      : no-repeat 10px center;
+  background-size : 21px;
+  padding-left    : 41px;
+}
+
+.sidebar-pitch .nav a:hover {
+  background-color : #FFF;
+}
+
+.sidebar-pitch .nav a.fr {
+  background-image : url("https://raw.githubusercontent.com/arvida/emoji-cheat-sheet.com/master/public/graphics/emojis/fr.png");
+}
+
+.sidebar-pitch .nav a.en {
+  background-image : url("https://raw.githubusercontent.com/arvida/emoji-cheat-sheet.com/master/public/graphics/emojis/gb.png");
+}
+
+.sidebar-pitch .nav a.es {
+  background-image : url("https://raw.githubusercontent.com/arvida/emoji-cheat-sheet.com/master/public/graphics/emojis/es.png");
+}
