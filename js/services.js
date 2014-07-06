@@ -79,7 +79,9 @@ angular.module( "trelloBlogServices", [] )
               if ( card.idList === configList.id ) {
                 if (!model.config[card.name]) model.config[card.name] = {};
                 if (!_.isEmpty(card.labels) && config.multilingual) {
-                  model.config[card.name][card.labels[0].name] = card.desc;
+                  _.forEach( card.labels, function ( label ) {
+                    model.config[card.name][label.name] = card.desc;
+                  } );
                 } else {
                   model.config[card.name][config.language] = card.desc;
                 }
