@@ -124,7 +124,7 @@
     </section>
 
     <aside class="sidebar-pitch col-sm-4" data-ng-controller="AsideCtrl">
-      <ul class="nav nav-pills">
+      <ul class="nav nav-pills" data-ng-show="config.multilingual">
         <li data-ng-repeat="label in trello.labels"
             data-ng-show="label | lang"
             data-ng-class="{ active: ( shortLocale === label ) }"
@@ -132,7 +132,7 @@
           <a href="#" class="{{ label }}" data-ng-click="$root.locale=label">{{ label | lang }}</a>
         </li>
       </ul>
-      <p data-debug="{{trello.config.description[locale]}}" data-markdown="trello.config.description[locale]"></p>
+      <p data-markdown="trello.config.description[locale]"></p>
       <h3>{{ 'archives' | i18n }}</h3>
       <div data-ng-repeat="period in trello.cards | notPastDue | published | currentLanguage:locale | filter:search | category | uniquePeriods">
         <a href="#" data-ng-click="$root.period=period.due;">{{ period.due | date: 'MMMM yyyy' }}</a>
