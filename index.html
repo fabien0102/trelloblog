@@ -110,7 +110,7 @@
                   data-ng-show="post.members">
               <span data-ng-repeat="member in post.members">
                 <img class="post-author img-circle pop-in"
-                     data-ng-src="https://trello-avatars.s3.amazonaws.com/{{ member.avatarHash}}/50.png"
+                     data-ng-src="https://trello-avatars.s3.amazonaws.com/{{ member.avatarHash }}/50.png"
                      data-tooltip-placement="right"
                      data-tooltip="{{member.fullName}}"/>
               </span>
@@ -123,10 +123,10 @@
     </section>
 
     <aside class="sidebar-pitch col-sm-4" data-ng-controller="AsideCtrl">
-    <ul class="nav nav-pills">
+      <ul class="nav nav-pills">
         <li data-ng-repeat="label in trello.labels"
             data-ng-show="label | lang"
-            data-ng-class="{active: (shortLocale == label)}"
+            data-ng-class="{ active: ( shortLocale === label ) }"
             >
           <a href="#" class="{{label}}" data-ng-click="$root.locale=label">{{ label | lang }}</a>
         </li>
@@ -137,7 +137,7 @@
 
       <h3>{{ 'archives' | i18n }}</h3>
       <div data-ng-repeat="period in trello.cards | notPastDue | published | currentLanguage:locale | filter:search | category | uniquePeriods">
-        <a href="#" data-ng-click="$root.period=period.due;">{{period.due | date: 'MMMM yyyy'}}</a>
+        <a href="#" data-ng-click="$root.period=period.due;">{{ period.due | date: 'MMMM yyyy' }}</a>
       </div>
     </aside>
   </div>
