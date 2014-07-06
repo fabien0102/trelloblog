@@ -37,7 +37,7 @@ var html = fs.readFileSync("./index.html" ).toString();
 
 // Prepare js dependencies and remove links
 var js_files = [];
-html = html.replace(/\ *<script src=\"(.*)\"><\/script>\n/g, function(script, src){
+html = html.replace(/\ *<script src=\"(.*)\"><\/script>/g, function(script, src){
   js_files.push(src);
   return "";
 });
