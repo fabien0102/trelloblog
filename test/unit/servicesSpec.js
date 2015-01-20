@@ -197,9 +197,13 @@ describe( "Taab services", function () {
             {id: "533f122757218a7e2c84c2cb", name: "Catégorie 1"}
           ],
           cards: [
-            {idMembers: [ "51dad2ce8cdcf73a320018c5" ], due: 1},
-            {idMembers: [ "51843f636ef14b8a690062dc" ], due: 2},
-            {idMembers: [ "51843f636ef14b8a690062dc", "51dad2ce8cdcf73a320018c5" ], due: 3}
+            {idList: "533f122757218a7e2c84c2cb", idMembers: ["51dad2ce8cdcf73a320018c5"], due: 1},
+            {idList: "533f122757218a7e2c84c2cb", idMembers: ["51843f636ef14b8a690062dc"], due: 2},
+            {
+              idList: "533f122757218a7e2c84c2cb",
+              idMembers: ["51843f636ef14b8a690062dc", "51dad2ce8cdcf73a320018c5"],
+              due: 3
+            }
           ],
           members: [
             { id: "51dad2ce8cdcf73a320018c5", username: "fmonniot" },
