@@ -12,6 +12,13 @@ strong API that Trello provides.
 
 Writing posts and managing the blog becomes dead-easy and insanely fast!
 
+## Demo and tutorials
+
+A little demo with a pretty documentation of this project:
+
+- [Blog](http://fabien0102.github.io/trelloblog/) (gh-pages)
+- [Admin interface](https://trello.com/b/RCwudeYO/trello-as-a-blog) (trello board)
+
 ## Initialization
 
 To contribute to the project:
