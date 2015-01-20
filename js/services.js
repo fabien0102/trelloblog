@@ -63,7 +63,7 @@ angular.module( "trelloBlogServices", [] )
           model.lists = _.filter( res.data.lists, function ( list ) {
             return !/^\[.*\]$/.exec( list.name );
           } );
-          var configList = _.findWhere( res.data.lists, { name: config.configurationList });
+          var configList = _.findWhere( res.data.lists, { name: config.configurationList }) || {};
 
 
           // Sort by publication date
