@@ -15,7 +15,7 @@ describe( "Taab services", function () {
         tmhDynamicLocale = {set: sinon.spy()};
 
         $provide.value( "tmhDynamicLocale", tmhDynamicLocale );
-        $provide.constant( "config", { language: "en"} );
+        $provide.constant( "config", { language: "en", multilingual: true} );
         $provide.constant( "LOCALES", {
           "en": { "foo": "en" },
           "fr": { "foo": "fr" },
@@ -32,6 +32,11 @@ describe( "Taab services", function () {
 
     it( "should initialize the locale to the browser default", function () {
       expect( $rootScope.locale ).to.equal( navigator.language.toLocaleLowerCase() );
+    } );
+
+    it( "should initialize the locale to the language default without mulilingual", function () {
+      $rootScope.config = {language: "en", multilingual: false};
+      expect( $rootScope.locale ).to.equal( "fr" );
     } );
 
     it( "should propagate change of locale", function () {
